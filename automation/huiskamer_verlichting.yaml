@@ -1,0 +1,26 @@
+
+
+
+
+# # Turns on lights 1 hour before sunset if people are home
+# # and if people get home between 16:00-23:00
+  # - alias: 'Rule 1 Light on in the evening'
+    # trigger:
+      # # Prefix the first line of each trigger configuration
+      # # with a '-' to enter multiple
+      # - platform: state
+        # entity_id: switch.KaKu_handzender_klein_K2
+        # to: 'on'
+    # condition:
+      # # Prefix the first line of each condition configuration
+      # # with a '-'' to enter multiple
+      # - condition: time
+        # after: '15:00:00'
+        # before: '23:59:00'
+    # action:
+      # # With a single service call, we don't need a '-' before service - though you can if you want to
+      # # service: homeassistant.turn_on
+      # # entity_id: group.living_room
+      # - platform: state
+        # entity_id: switch.kaku_handzender_k1
+        # to: 'on'

@@ -1,0 +1,139 @@
+goodnight:
+  sequence:
+    - service: frontend.set_theme
+      data:
+        name: 'dark_theme'
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.goodnight_initiated
+    - service: climate.set_temperature
+      entity_id: climate.downstairs_hallways
+      data:
+        target_temp_high: 72
+        target_temp_low: 66
+    - service: script.door_status_check
+    - service: cover.close_cover
+      entity_id: cover.garage_door_opener
+    - service: light.turn_off
+      entity_id: light.bias_light
+    - service: remote.turn_off
+      entity_id: remote.living_room  
+    - service: script.turn_off
+      entity_id: script.goodnight_timer_off
+    - service: automation.turn_off
+      entity_id: 
+        - automation.kitchen_uplighting__weekends
+        - automation.kitchen_uplighting__weekdays
+    - service: media_player.turn_off
+      entity_id: 
+        - media_player.dining_room_speaker
+        - media_player.kitchen_assistant
+        - media_player.livingroom_tv
+        - media_player.livingroom_assistant
+        - media_player.bedroom_speaker
+        - media_player.bedroom_assistant
+        - media_player.party_mode
+        - media_player.all_speakers
+        - media_player.garage_speaker
+        - media_player.house_party_protocol
+        - media_player.bathroom_assistant
+    - service: script.fan_off
+    - service: light.turn_off
+      entity_id:
+        - light.foyer
+        - light.master_hallway
+        - light.dining_room
+        - light.stairway
+      data:
+        transition: 30
+    - service_template: >
+        {% if states.media_player.bedroom_speaker.state == 'playing' %}
+          {% if states.media_player.bedroom_speaker.attributes.media_content_id.startswith('http://10.0.0.101/storage/whitenoise') %}
+          {% else %}
+            script.whitenoise
+          {% endif %}
+        {% else %}
+          script.whitenoise
+        {% endif %}
+    - service: automation.turn_on
+      entity_id: automation.exterior_front__dim
+    - service: light.turn_on
+      entity_id:
+        - light.front_door
+        - light.front_floods
+        - light.rear_floods
+      data:
+        brightness: 100
+        transition: 15
+    - service_template: >
+        {% if states.light.pantry.state == 'on' and states.sensor.time.state|float <= 1.50 %}
+          light.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
+      entity_id: light.pantry
+      data: 
+        brightness: 100
+        transition: 15
+    - service: script.goodnight_livingroom
+    - service: script.goodnight_bedroom
+    - service: light.turn_off
+      entity_id:
+        - light.chandelier
+        - light.overhead_light
+        - light.recessed_lights
+        - light.desk_lamp
+    - delay:
+        seconds: 30
+    - service: automation.turn_on
+      entity_id: 
+        - automation.kitchen_uplighting__weekends
+        - automation.kitchen_uplighting__weekdays
+    - service: script.turn_on
+      entity_id: script.goodnight_timer_off
+
+goodnight_timer_off:
+  sequence:
+    - delay: 
+        minutes: 5
+    - condition: template
+      value_template: '{{ states.light.living_room.attributes.brightness <= 200 }}'
+    - service: light.turn_off
+      entity_id: light.communal
+    - service: light.turn_off
+      entity_id: light.pantry
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.goodnight_initiated
+
+goodnight_livingroom:
+  sequence:
+    - condition: state
+      entity_id: light.living_room
+      state: 'on'
+    - service: light.turn_on
+      entity_id: light.living_room
+      data:
+        color_temp: 500
+        brightness: 100
+        transition: 30
+    - service: light.turn_on
+      entity_id:
+        - light.cabinet_lights
+      data:
+        color_temp: 450
+        brightness: 100
+        transition: 30
+
+goodnight_bedroom:
+  sequence: 
+    - service: light.turn_on
+      entity_id: light.master_bedroom
+      data:
+        color_temp: 500
+        transition: 30
+      data_template:
+        brightness: > 
+          {% if states.light.master_bedroom.state == 'off' or states.light.master_bedroom.attributes.brightness < 50 %}
+            50
+          {% else %}
+            {{ states.light.master_bedroom.attributes.brightness }}
+          {% endif %}

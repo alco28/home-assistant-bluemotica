@@ -1,0 +1,10 @@
+- id: '1543176678428'
+  alias: Nieuwe automatisering
+  trigger:
+  - entity_id: ' switch.kaku_handzender_klein_k1'
+    platform: state
+    to: '1'
+  condition: []
+  action:
+  - data: {}
+    service: switch.toggle

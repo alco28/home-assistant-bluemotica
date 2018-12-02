@@ -1,0 +1,16 @@
+deurbel_notify_reset:
+  sequence:
+    - service: notify.telegram_avn
+      data:
+        title: voordeur foto
+        message: "Er staat iemand voor de deur"
+        data:
+            photo:
+              - url:  http://192.168.1.151:1099/tmpfs/snap.jpg?usr=nano&pwd=Wcz@~6oapy
+                caption: De deurbel ging om {{ now().strftime('%H:%M:%S') }}
+    - delay:
+        seconds: 3
+    - service: homeassistant.turn_off
+      data:
+        entity_id: switch.deurbel
+

@@ -1,0 +1,72 @@
+homeassistant:
+  name: Home
+  latitude: 52.3824
+  longitude: 6.00
+  elevation: 11
+  unit_system: metric
+  time_zone: Europe/Amsterdam
+  customize: !include_dir_merge_named customize
+
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://192.168.1.104:3218
+
+
+config:
+discovery:
+ffmpeg:
+frontend: !include ./configuration/frontend.yaml
+history: !include ./configuration/history.yaml
+logbook: !include ./configuration/logbook.yaml
+logger: !include ./configuration/logger.yaml
+map:
+recorder: !include ./configuration/recorder.yaml
+sun:
+updater:
+
+rfxtrx:
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1Y0NJGR-if00-port0
+  debug: False
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_api
+    parse_mod: html
+    # trusted_networks:
+      # - 149.154.167.197/32
+      # - 149.154.167.198/31
+      # - 149.154.167.200/29
+      # - 149.154.167.208/28
+      # - 149.154.167.224/29
+      # - 149.154.167.232/31
+    allowed_chat_ids:
+      - !secret telegram_chatID_1
+
+
+automation: !include_dir_merge_list automation
+binary_sensor: !include ./configuration/binary_sensor.yaml
+#climate: !include ./configuration/climate.yaml
+camera: !include ./configuration/camera.yaml
+device_tracker: !include ./configuration/device_tracker.yaml
+#google: !include ./configuration/calendar.yaml
+# google_assistant: !include ./configuration/google_assistant.yaml
+group: !include ./configuration/group.yaml
+http: !include ./configuration/http.yaml
+ifttt: !include ./configuration/ifttt.yaml
+# input_boolean: !include ./configuration/input_boolean.yaml
+input_number: !include ./configuration/input_number.yaml
+input_select: !include ./configuration/input_select.yaml
+light: !include ./configuration/light.yaml
+# lock: !include ./configuration/lock.yaml
+media_player: !include ./configuration/media_player.yaml
+mqtt: !include ./configuration/mqtt.yaml
+# nest: !include ./configuration/nest.yaml
+notify: !include ./configuration/notify.yaml
+# remote: !include ./configuration/remote.yaml
+script: !include_dir_merge_named script
+sensor: !include ./configuration/sensor.yaml
+# shell_command: !include ./configuration/shell_command.yaml
+switch: !include ./configuration/switch.yaml
+tts: !include ./configuration/tts.yaml

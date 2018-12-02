@@ -1,0 +1,51 @@
+# - name: messenger_notifications
+  # platform: facebook
+  # page_access_token: !secret facebook_token
+#- name: Amazon SMS
+#  platform: aws_sns
+#  aws_access_key_id: !secret aws_access_key_id
+#  aws_secret_access_key: !secret aws_secret_access_key 
+#  region_name: 'us-east-1'
+
+# - name: chrome_notifications
+  # platform: html5
+  # gcm_api_key: !secret gcm_sender_key
+  # gcm_sender_id: !secret gcm_sender_id
+  
+# - name: Google Assistant
+#   platform: rest
+#   resource: http://10.0.0.81:5000/broadcast_message
+
+#pushbullet notificaties
+ - name: pushbullet
+   platform: pushbullet
+   api_key: !secret PB_pass
+   device: Firefox_alco
+    
+# telegramm bot 
+
+ - name: telegram_avn 
+   platform: telegram
+   chat_id: 371659595
+
+
+# telegram_api: bot572395118:AAFdy645L3GXMVrSluFVCIkeMvxomcxgHsM
+#bot aanroepen voor chat id : https://api.telegram.org/bot572395118:AAFdy645L3GXMVrSluFVCIkeMvxomcxgHsM/getUpdates?offset=0
+# telegram_chatID: 371659595
+
+# ok	true
+# result	
+# message_id	7
+# from	
+# id	572395118
+# is_bot	true
+# first_name	"Huis notificaties"
+# username	"hass_hoeve_bot"
+
+# chat	
+# id	371659595
+# first_name	"Alco [Nightcrawler]"
+# username	"NightcrawlerX2"
+# type	"private"
+# date	1526392334
+# text	"\"Hello from SMTFirstBot\""

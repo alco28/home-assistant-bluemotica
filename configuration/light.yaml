@@ -1,0 +1,22 @@
+# - platform: mqtt
+#   name: 'Overhead Light'
+#   state_topic: "Garden1/Overhead Light/switch"
+#   command_topic: "smartthings/Overhead Light/switch"
+#   payload_on: "on"
+#   payload_off: "off"
+#   retain: true
+- platform: rfxtrx
+  automatic_add: True
+  devices:
+    0b11000517bc0cfe08010f70:
+      name: "Keuken bar led"
+    0b11000429bc0cfe02010f70:
+      name: "Keuken koffie Led"
+    0b11000602bc0cfe06010f70:
+      name: "Keukenblok strip"
+    0b11000535bc0cfe06010f70:
+      name: "Gang spotjes dimmer"
+    0b11000387bc0cfe02010f70:
+      name: "Keukenplafond dimmer"
+    0b11000680bc0cfe02010f70:
+      name: "Rintze plafond dimmer"

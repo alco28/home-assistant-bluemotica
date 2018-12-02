@@ -1,0 +1,19 @@
+#db_url: postgres://@/hass
+#recorder:
+  purge_keep_days: 15
+  purge_interval: 2
+  db_url: mysql://Hass:3nkgyHvfMqxKPMjF@192.168.1.125:3307/homeassistant?charset=utf8
+  exclude:
+    domains:
+      - automation
+      - sensor
+      - updater
+  include:
+    entities:
+      - sensor.postnl
+      - sensor.cpu
+      - sensor.cpu_temperature
+      - sensor.memory_use_percent
+      - sensor.load_5m
+      
+      

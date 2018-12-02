@@ -1,0 +1,10 @@
+- alias: vriezen
+  trigger:
+    platform: numeric_state
+    entity_id: sensor.tuin_temperature
+    below: 0
+  action:
+    service: notify.pushbullet
+    data_template:
+      title: "Lage buitentemperatuur"
+      message: "Het vriest buiten de temperatuur is {{ state.sensor.tuin_temperature }} graden"

@@ -1,0 +1,14 @@
+home:
+  sequence:
+    - service: cover.close_cover
+      entity_id: cover.garage_door_opener  
+    - service: automation.trigger
+      entity_id: automation.home_mode__livingroom
+    - service: automation.trigger
+      entity_id: automation.home_mode__general
+    - service: automation.trigger
+      entity_id: automation.home_mode__bedroom
+    - service: remote.turn_on
+      entity_id: remote.living_room
+      data:
+        activity: 19594181

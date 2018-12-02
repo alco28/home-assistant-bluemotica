@@ -1,0 +1,5 @@
+
+ default: warn
+ logs:
+  homeassistant.components: warn
+  # homeassistant.components.rfxtrx: debug

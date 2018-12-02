@@ -1,0 +1,188 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "media_player.huiskamer",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "9e26e3bf-2a06-a868-ab46-a243f18a9329"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.pws_precip_1d",
+                "name": null,
+                "platform": "wunderground",
+                "unique_id": "@6.000000,52.382400,precip_1d"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.pws_weather_1d",
+                "name": null,
+                "platform": "wunderground",
+                "unique_id": "@6.000000,52.382400,weather_1d"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.pws_alerts",
+                "name": null,
+                "platform": "wunderground",
+                "unique_id": "@6.000000,52.382400,alerts"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.wandevice_kbytesec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_kbyte/sec_sent"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.wandevice_packetssec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_packets/sec_received"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.wandevice_packets_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_packets_received"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.wandevice_bytes_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_bytes_received"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.wandevice_packetssec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_packets/sec_sent"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.wandevice_packets_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_packets_sent"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.wandevice_kbytesec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_kbyte/sec_received"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.wandevice_bytes_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_bytes_sent"
+            },
+            {
+                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.archer_c2_kbytesec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_kbyte/sec_sent"
+            },
+            {
+                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.archer_c2_bytes_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_bytes_sent"
+            },
+            {
+                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.archer_c2_kbytesec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_kbyte/sec_received"
+            },
+            {
+                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.archer_c2_bytes_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_bytes_received"
+            },
+            {
+                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.archer_c2_packetssec_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets/sec_sent"
+            },
+            {
+                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.archer_c2_packets_sent",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets_sent"
+            },
+            {
+                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.archer_c2_packets_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets_received"
+            },
+            {
+                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.archer_c2_packetssec_received",
+                "name": null,
+                "platform": "upnp",
+                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets/sec_received"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

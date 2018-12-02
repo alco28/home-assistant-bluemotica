@@ -1,0 +1,22 @@
+secrets: /configuration/
+log:
+  accessfile: /export/hass/appdaemon_test/logs/access.log
+  errorfile: /export/hass/appdaemon_test/logs/error.log
+  logfile: /export/hass/appdaemon_test/logs/appdaemon.log
+  log_generations: 3
+  log_size: 100000
+appdaemon:
+  threads: 10
+  # time_zone: Europe/Amsterdam
+  api_port: 5000
+  api_key: !secret http_password
+  # api_ssl_certificate: <path/to/root/CA/cert>
+  # api_ssl_key: <path/to/root/CA/key>
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://192.168.1.104
+      ha_key: !secret http_password
+      # cert_path: <path/to/root/CA/cert>
+      # cert_verify: True
+      namespace: default

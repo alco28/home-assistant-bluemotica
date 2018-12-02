@@ -1,0 +1,150 @@
+default_view:
+  view: yes
+  icon: mdi:home-assistant
+  name: Start
+  entities: 
+    # - group.family
+    - group.garage
+    - group.weer
+    - group.garden
+    # - group.alarm_zones
+    - media_player.huiskamer
+    - group.foyer
+    - group.huiskamer
+    - group.keuken
+    - climate.woonkamer
+    # - group.upstairs
+    - sensor.emoncms_solar_total
+
+
+Camera:
+  view: yes
+  icon: mdi:cctv
+  name: beveiliging
+  entities:
+    - camera.deur
+    - camera.oprit
+    - camera.tuin
+lights:
+  view: yes
+  icon: mdi:lightbulb
+  name: Lampen
+  entities:
+    - group.living_room_lights
+    - group.hal
+    - group.foyer
+    - group.garden
+    - group.kitchen_lights
+media:
+  view: yes
+  icon: mdi:cast
+  name: Media spelers
+  entities:
+    - media_player.huiskamer
+
+settings:
+  view: yes
+  icon: mdi:settings
+  name: Settings
+  entities:
+    - updater.updater
+    - group.override
+    - group.system_monitor
+    - group.devices
+    - group.all_switches
+    - group.all_devices
+    - group.all_lights
+    - group.all_scripts
+   # - group.all_sensors
+    
+christmas:
+  switch.christmas_lights
+huiskamer:
+  control: hidden
+  entities:
+    - sensor.current_activity
+    - input_select.harmony
+    - light.staandelamp_3luik
+    - light.dressoir
+    - switch.kaku_handzender_k1
+    - switch.kaku_handzender_k2
+    - switch.kaku_handzender_k3
+# master_bedroom:
+  # - light.tristans_nightstand
+  # - light.crystals_nightstand
+  # - light.bedroom_floor_lamp
+first_floor:
+  view: yes
+  icon: mdi:hotel
+  name: Boven
+  control: hidden
+  entities:
+    - switch.rintze_schakelaar
+    - switch.badkamerventilator
+    
+  # - light.desk_lamp
+  # - climate.upstairs_hallway
+  # - sensor.protect_up
+garage:
+  
+living_room_lights:
+
+keuken:
+  name: keuken
+  control: hidden
+  entities:
+    - switch.keukenblok
+    - light.keukenplafond
+    # - light.overhead_light
+dining_room:
+
+foyer:
+
+stairway:
+
+exterior:
+  view: yes
+  icon: mdi:flower
+  name: Tuin
+  control: hidden
+  entities:
+    - switch.garden2pump
+    - switch.garden2lights
+    - switch.fontein1
+    - sensor.emoncms_solar_sere
+    - sensor.emoncms_solar_total
+
+chromecasts:
+  - media_player.huiskamer
+weer:
+  - sun.sun
+  - sensor.tuin_temperature
+  - sensor.regen_rain_rate
+  - sensor.wind_wind_direction
+
+
+automation_view:
+  name: Automation
+  view: yes
+  control: hidden
+  entities:
+    - group.all_automations
+    - group.all_scripts
+    - group.all_devices
+    - group.all_switches
+    - group.all_lights
+    
+system_monitor:
+  name: 'RPI monitor'
+  control: hidden
+  entities:
+    - sensor.Disk_Utilization
+    - sensor.RAM_Utilization
+    - sensor.memory_use_percent
+    - sensor.cpu_temperature
+    - sensor.load_5m
+    - sensor.myipopendnscom
+    
+    
+    
+

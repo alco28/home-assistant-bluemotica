@@ -1,0 +1,10 @@
+harmony:
+  name: Harmony Control
+  options:
+    - Select Input
+    - Watch DirecTV
+    - Watch DVD
+    - Watch Video    
+    - Watch MediaPlayer
+    - Power Off
+  icon: mdi:monitor

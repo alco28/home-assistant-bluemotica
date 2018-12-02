@@ -1,0 +1,65 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "local_push",
+                "data": {},
+                "domain": "cast",
+                "entry_id": "2e33ac0e6d9e44ef9dbf7f5f7f5f05a6",
+                "source": "discovery",
+                "title": "Google Cast",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {},
+                "domain": "mqtt",
+                "entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "source": "import",
+                "title": "configuration.yaml",
+                "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "webhook_id": "f79ad53f5c1d6f2e50609504c002e9e1a0bb9dd1568bf932fbde8677659d84a3"
+                },
+                "domain": "ifttt",
+                "entry_id": "a8005a6393cb405dbab2139dd15726ef",
+                "source": "user",
+                "title": "IFTTT Webhook",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "port_mapping": true,
+                    "sensors": true,
+                    "ssdp_description": "http://192.168.1.1:1900/gatedesc.xml",
+                    "udn": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37"
+                },
+                "domain": "upnp",
+                "entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "source": "user",
+                "title": "Archer_C2",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {
+                    "port_mapping": true,
+                    "sensors": false,
+                    "ssdp_description": "http://192.168.1.2:1780/InternetGatewayDevice.xml",
+                    "udn": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B"
+                },
+                "domain": "upnp",
+                "entry_id": "066f4c40ea0d49ec8546727d734c771e",
+                "source": "discovery",
+                "title": null,
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

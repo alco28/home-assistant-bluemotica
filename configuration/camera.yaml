@@ -1,0 +1,24 @@
+# - platform: mjpeg
+  # name: tuin
+  # mjpeg_url: !secret tuincam_url
+
+- platform: ffmpeg
+  name: Oprit
+  input: -rtsp_transport tcp -i !secret opritcam_url
+  # input: -rtsp_transport tcp -i rtsp://192.168.1.155:554/user=admin&password=Hoeve33&channel=1&stream=1.sdp?
+
+- platform: onvif
+  username: !secret deurcam_name
+  password: !secret deurcam_pass
+  port: 8080
+  host: 192.168.1.151
+  profile: 2
+  name: Deur
+
+# host (Required): An IP or hostname of the camera.
+# name (Optional): Override the name of your camera.
+# username (Optional): The username for the camera.
+# password (Optional): The password for the camera.
+# port (Optional): The port for the camera. This defaults to 5000.
+# profile (Optional): Video profile that will be used to obtain the stream. This defaults to 0. More details below.
+# extra_arguments (Optional): Extra options to pass to ffmpeg, e.g., image quality 

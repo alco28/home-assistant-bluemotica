@@ -1,0 +1,3 @@
+platform: google
+language: 'nl'
+base_url: http://192.168.1.104:8123

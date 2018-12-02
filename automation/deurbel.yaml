@@ -1,0 +1,17 @@
+- alias: Deurbel foto en bericht
+  # condition:
+    # condition: state
+    # entity_id: switch.deurbel
+    # state: 'off'
+    # # for:
+      # # seconds: 5
+  trigger:
+    platform: state
+    entity_id: switch.deurbel
+    to: 'on'
+    # for:
+      # seconds: 20
+  action:
+    - service: script.turn_on
+      entity_id: script.deurbel_notify_reset
+

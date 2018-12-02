@@ -1,0 +1,70 @@
+# Garden MQTT
+# - platform: mqtt
+  # name: "Kleine fonteinverlichting"
+  # state_topic: "Garden2/STAT/POWER1"
+  # command_topic: "Garden2/cmnd/POWER1"
+  # availability_topic: "Garden2/tele/LWT"
+  # qos: 1
+  # payload_on: "ON"
+  # payload_off: "OFF"
+  # payload_available: "Online"
+  # payload_not_available: "Offline"
+  # retain: true
+- platform: rfxtrx
+  automatic_add: True
+  signal_repetitions: 2
+  devices:
+    0b1100a7009cb39a01000060:
+      name: "KaKu handzender klein K1"
+    0b1100e4009cb39a02010f70:
+      name: "KaKu handzender klein K2"
+    0b110040012d85e60a010f60:
+      name: "KaKu stekker dressoir"
+    0b11000669bc0cfe01010f70:
+      name: "KaKu stekker DIO"
+    0b11008c0041068b01010f60:
+      name: "KaKu handzender K1"
+    0b1100950041068b02010f50:
+      name: "KaKu handzender K2"
+    0b1100970041068b03010f50:
+      name: "KaKu handzender K3"
+    0b110003004b585e0b010f60:
+      name: "Keukenblok schakelaar"
+    0b110004004b585e0c010f60:
+      name: "Keukenplafond schakelaar"
+    0b110040012d84e60a010f70:
+      name: "badkamerventilator"
+    0b11004600777dea0a010f70:
+      name: "Rintze schakelaar"
+    0b11000434bc0cfe06010f70:
+      name: "bel kamer"
+    0b11000588bc0cfe06010f70:
+      name: "bel gang"
+    0b11001001a3c4be0c010f70:
+      name: "deurbel"
+      fire_event: true
+
+    
+
+    # impuls action remote
+
+
+
+# - platform: template
+#    switches:
+#     vacation_mode:
+#       value_template: "{{ states.group.vacation_mode.state == 'off' }}"
+#       turn_on:
+#         service: automation.turn_off
+#         entity_id: group.vacation_mode
+#       turn_off:
+#         service: automation.turn_on
+#         entity_id: group.vacation_mode
+#     routines:
+#       value_template: "{{ states.group.disable_all_automations.state == 'off' }}"
+#       turn_on:
+#         service: automation.turn_off
+#         entity_id: group.disable_all_automations
+#       turn_off:
+#         - service: automation.turn_on
+#           entity_id: group.disable_all_automations

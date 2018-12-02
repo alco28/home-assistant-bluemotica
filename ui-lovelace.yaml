@@ -1,0 +1,75 @@
+title: Thuis Rhoeve33
+# Include external resources
+resources:
+  - url: /local/my-custom-card.js
+    type: js
+  - url: /local/my-webfont.css
+    type: css
+
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+background: center / cover no-repeat url("/background.png") fixed
+# Exclude entities from "Unused entities" view
+excluded_entities:
+  - weblink.router
+views:
+    # View tab title.
+  - title: Example
+    # Optional unique id for direct access /lovelace/${id}
+    id: example
+    # Optional background (overwrites the global background).
+    background: radial-gradient(crimson, skyblue)
+    # Each view can have a different theme applied. Theme should be defined in the frontend.
+    theme: dark-mode
+    # The cards to show on this view.
+    cards:
+        # The filter card will filter entities for their state
+      - type: entity-filter
+        entities:
+          - device_tracker.paulus
+          - device_tracker.anne_there
+          - input_select.harmony
+          - light.staandelamp_3luik
+          - light.dressoir
+          - switch.kaku_handzender_k1
+          - switch.kaku_handzender_k2
+          - switch.kaku_handzender_k3
+          - light.keukenplafond
+        state_filter:
+          - 'home'
+        card:
+          type: glance
+          title: People that are home
+
+        # The picture entity card will represent an entity with a picture
+      - type: picture-entity
+        image: https://www.home-assistant.io/images/default-social.png
+        entity: light.bed_light
+
+    # Specify a tab icon if you want the view tab to be an icon.
+  - icon: mdi:home-assistant
+    # Title of the view. Will be used as the tooltip for tab icon
+    title: Woonkamer
+    cards:
+        # Entities card will take a list of entities and show their state.
+      - type: entities
+        # Title of the entities card
+        title: Woonkamer verlichting
+        # The entities here will be shown in the same order as specified.
+        # Each entry is an entity ID or a map with extra options.
+        entities:
+          - light.staandelamp_3luik
+          - light.dressoir
+          - switch.kaku_handzender_k1
+          - switch.kaku_handzender_k2
+          - switch.kaku_handzender_k3
+          - switch.keukenblok
+      - type: gauge
+        title: Zon opbrengst
+        entity: sensor.emoncms_solar_total
+        severity:
+          red: 0
+          green: 500
+          yellow: 50
+          min: -10
+          max: 3000
+        unit_of_measurement: W

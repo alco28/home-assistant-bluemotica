@@ -1,0 +1,16 @@
+exclude:
+    domains:
+      - automation
+      - sensor
+    entities:
+      - sensor.time
+      - sun.sun
+      - sensor.wind_wind_direction
+      
+
+include:
+    domains:
+     # - sensor
+      - switch
+      - media_player
+      - light

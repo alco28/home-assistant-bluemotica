@@ -1,0 +1,4 @@
+platform: harmony
+name: woonkamer
+host: 192.168.1.199
+port: 5222

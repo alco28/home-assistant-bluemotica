@@ -1,0 +1,13 @@
+# - platform: bluetooth_tracker
+#   track_new_devices: false
+#   consider_home: 120
+#- platform: bluetooth_le_tracker
+# - platform: tplink
+  # host: 192.168.1.1
+  # username: !secret tplink_user
+  # password: !secret tplink_pass
+  # track_new_devices: true
+  # consider_home: 300  
+#- platform: google_maps
+#  username: !secret maps_user
+#  password: !secret maps_pass

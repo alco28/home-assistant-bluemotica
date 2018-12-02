@@ -1,0 +1,15 @@
+# mqtt:
+  broker: 192.168.1.110
+  port: 1883
+  protocol: 3.1.1
+  username: !secret MQTT_user
+  password: !secret MQTT_pass
+  discovery: true
+  discovery_prefix: homeassistant
+  # birth_message:
+    # topic: 'hass/status'
+    # payload: 'online'
+  # will_message:
+    # topic: 'hass/status'
+    # payload: 'offline'
+  

@@ -1,0 +1,10 @@
+server_port: 8123
+base_url: bluemotica.nl
+api_password: !secret http_password
+login_attempts_threshold: 5
+# ssl_certificate: /etc/letsencrypt/live/smrtho.us/fullchain.pem
+# ssl_key: /etc/letsencrypt/live/smrtho.us/privkey.pem
+# trusted_networks:
+    # - 127.0.0.1
+    # - ::1
+    # - 192.168.1.0/244
