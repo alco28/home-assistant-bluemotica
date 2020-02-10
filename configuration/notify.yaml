@@ -29,9 +29,8 @@
    chat_id: 371659595
 
 
-# telegram_api: bot572395118:AAFdy645L3GXMVrSluFVCIkeMvxomcxgHsM
-#bot aanroepen voor chat id : https://api.telegram.org/bot572395118:AAFdy645L3GXMVrSluFVCIkeMvxomcxgHsM/getUpdates?offset=0
-# telegram_chatID: 371659595
+# telegram_api: 
+#bot aanroepen voor chat id : 
 
 # ok	true
 # result	
