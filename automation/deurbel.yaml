@@ -1,4 +1,5 @@
 - alias: Deurbel foto en bericht
+  initial_state: 'on'
   # condition:
     # condition: state
     # entity_id: switch.deurbel

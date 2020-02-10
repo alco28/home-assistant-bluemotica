@@ -1,5 +1,10 @@
-
-#TODO:
+# - platform: wunderground
+  # api_key: !secret wunderground
+  # monitored_conditions:
+    # - alerts
+    # - weather_1d
+    # - precip_1d
+# #TODO:
 #Platform: emoncms 
 #coinbase https://www.home-assistant.io/components/sensor.emoncms/
 
@@ -10,13 +15,23 @@
   scan_interval: 30
   id: 1
   unit_of_measurement: "W" 
-  exclude_feed_id:
-    - 10
-    - 15
-    - 6
+  include_only_feed_id:
+    - 1
+    - 2
     - 3
+    - 6
+    - 7
     - 11
+    - 15
+    - 19
     - 20
+    - 27
+    - 28
+    - 29
+    - 31
+    - 33
+    - 34
+    
   sensor_names:
     1: "Voltage AC"
     2: "House use"
@@ -24,7 +39,9 @@
     17: "Kookplaat"
     19: "Stroom import"
     22: "Temperatuur water aanvoer"
-    23: "Tmperatuur kruipruimte"
+    23: "Temperatuur kruipruimte"
+    27: "Solar Serre"
+    31: "Solar totaal"
 
 # Day records from energymonitor
 - platform: emoncms
@@ -38,16 +55,11 @@
     - 15
   sensor_names:
     15: "KWHd total"
-    10: "KWHd Solar"
+    33: "KWHd Solar"
     
 
 
-- platform: wunderground
-  api_key: !secret wunderground
-  monitored_conditions:
-    - alerts
-    - weather_1d
-    - precip_1d
+
 #weerstation
 - platform: rfxtrx
   automatic_add: True
@@ -56,12 +68,12 @@
       name: Regen
       data_type:
       - Rain rate
-    0a5202067d0100c4370050:
+    0a52021464010083430070:
       name: Tuin
       data_type:
       - Humidity
       - Temperature
-    0a520202600200d0340149:
+    0a520203b601005b620359:
       name: Tuin2
       data_type:
       - Humidity
@@ -78,20 +90,32 @@
 #  destination: place_id:
 #  options:
 #    arrival_time: '09:15:00'
-- platform: template
-  sensors:
-    cpu:
-      friendly_name: 'CPU Utilization'
-      value_template: '{{ states.sensor.processor_use.state | float(1) }}'
-      unit_of_measurement: '%'
-    ram:
-      friendly_name: 'RAM Utilization'
-      value_template: '{{ states.sensor.memory_use_percent.state | float(1) }}'
-      unit_of_measurement: '%'
-    disk:
-      friendly_name: 'Disk Utilization'
-      value_template: '{{states.sensor.disk_use_percent_.state | float(1) }}'
-      unit_of_measurement: '%'
+- platform: nederlandse_spoorwegen
+  email: !secret ns_user
+  password: !secret ns_password
+  routes:
+    - name: Apeldoorn-Amsterdam
+      from: Apd
+      to: Asd
+    - name: Amsterdam-Apeldoorn
+      from: Asd
+      to: Apd
+  #    via: Zl
+  
+# - platform: template
+  # sensors:
+    # cpu:
+      # friendly_name: 'CPU Utilization'
+      # value_template: '{{states.sensor.processor_use.state | float(1) }}'
+      # unit_of_measurement: '%'
+    # ram:
+      # friendly_name: 'RAM Utilization'
+      # value_template: '{{states.sensor.memory_use_percent.state | float(1) }}'
+      # unit_of_measurement: '%'
+    # disk:
+      # friendly_name: 'Disk Utilization'
+      # value_template: '{{states.sensor.disk_use_percent.state | float(1) }}'
+      # unit_of_measurement: '%'
 - platform: command_line
   name: CPU Temperature
   scan_interval:

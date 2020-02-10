@@ -1,23 +1,12 @@
-  garage_hot_start:
-    name: Garage Hot Start
-    initial: off
-    icon: mdi:car
   disable_away_mode:
-    name: Disable Away Mode
+    name: Zet afwezigheidsmode uit
     initial: off
     icon: mdi:run
   disable_alarm:
-    name: Disable Alarm
+    name: Alarm UIT
     initial: off
     icon: mdi:lock
-  fan_check:
-    name: Fan Check
-    initial: off
   wan_down:
-    initial: off
-  front_door_open:
-    initial: off
-  back_door_open:
     initial: off
   goodnight_initiated:
     initial: off
@@ -25,3 +14,7 @@
     initial: off
   movie_mode:
     initial: off
+  vakantie_verlichting:
+    name: Vakantie verlichting
+    initial: off
+    icon: mdi:gift

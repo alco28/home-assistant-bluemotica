@@ -1,0 +1,11 @@
+- platform: nederlandse_spoorwegen
+  email: !secret ns_user
+  password: !secret ns_password
+  routes:
+    - name: Apeldoorn-Amsterdam
+      from: Apd
+      to: Asd
+    - name: Amsterdam-Apeldoorn
+      from: Asd
+      to: Apd
+  #    via: Zl

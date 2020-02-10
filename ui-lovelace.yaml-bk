@@ -1,4 +1,4 @@
-title: My Awesome Home
+title: Thuis Rhoeve33
 # Include external resources
 resources:
   - url: /local/my-custom-card.js
@@ -12,30 +12,10 @@ background: center / cover no-repeat url("/background.png") fixed
 excluded_entities:
   - weblink.router
 views:
-
-default_view:
-  view: yes
-  icon: mdi:home-assistant
-  name: Start
-  entities: 
-    # - group.family
-    - group.garage
-    - group.weer
-    - group.garden
-    # - group.alarm_zones
-    - media_player.huiskamer
-    - group.foyer
-    - group.huiskamer
-    - group.keuken
-    - climate.woonkamer
-    # - group.upstairs
-
-    
-    
     # View tab title.
-  - title: Start
+  - title: Example
     # Optional unique id for direct access /lovelace/${id}
-    id: Hoeve33
+    id: example
     # Optional background (overwrites the global background).
     background: radial-gradient(crimson, skyblue)
     # Each view can have a different theme applied. Theme should be defined in the frontend.
@@ -47,6 +27,13 @@ default_view:
         entities:
           - device_tracker.paulus
           - device_tracker.anne_there
+          - input_select.harmony
+          - light.staandelamp_3luik
+          - light.dressoir
+          - switch.kaku_handzender_k1
+          - switch.kaku_handzender_k2
+          - switch.kaku_handzender_k3
+          - light.keukenplafond
         state_filter:
           - 'home'
         card:
@@ -61,22 +48,28 @@ default_view:
     # Specify a tab icon if you want the view tab to be an icon.
   - icon: mdi:home-assistant
     # Title of the view. Will be used as the tooltip for tab icon
-    title: Second view
+    title: Woonkamer
     cards:
-       - type: entities
-         entities:
-            - sensor.current_activity
-            - input_select.harmony
-            - light.staandelamp_3luik
-            - light.dressoir
-            - switch.kaku_handzender_k1
-            - switch.kaku_handzender_k2
-            - switch.kaku_handzender_k3
-          title: Beneden group
-
-        # The markdown card will render markdown text.
-      - type: markdown
-        title: Lovelace
-        content: >
-          Welcome to your **Lovelace UI**.
-
+        # Entities card will take a list of entities and show their state.
+      - type: entities
+        # Title of the entities card
+        title: Woonkamer verlichting
+        # The entities here will be shown in the same order as specified.
+        # Each entry is an entity ID or a map with extra options.
+        entities:
+          - light.staandelamp_3luik
+          - light.dressoir
+          - switch.kaku_handzender_k1
+          - switch.kaku_handzender_k2
+          - switch.kaku_handzender_k3
+          - switch.keukenblok
+      - type: gauge
+        title: Zon opbrengst
+        entity: sensor.emoncms_solar_total
+        severity:
+          red: 0
+          green: 500
+          yellow: 50
+          min: -10
+          max: 3000
+        unit_of_measurement: W

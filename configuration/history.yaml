@@ -1,16 +1,22 @@
 exclude:
     domains:
       - automation
-      - sensor
+      #- sensor
+      - device_tracker
+      
     entities:
       - sensor.time
       - sun.sun
       - sensor.wind_wind_direction
-      
-
+      - device_tracker.gsm_alco
+      - sensor.gsm_alco_available_status
 include:
     domains:
-     # - sensor
+      - sensor
       - switch
       - media_player
       - light
+    entities:
+       - sensor.0x00158d000257a9fb_illuminance
+       - binary_sensor.0x00158d000257a9fb_occupancy
+       - sensor.0xd0cf5efffe276402_action

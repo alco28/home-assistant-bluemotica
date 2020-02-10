@@ -8,5 +8,10 @@ exclude:
     - sensor.ram
     - sensor.wind_wind_direction
     - sensor.time
+    - device_tracker.avn
     # - sensor.air_quality
     # - sensor.rasplex
+  domains:
+    - device_tracker
+    - updater 
+    

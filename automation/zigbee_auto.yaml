@@ -1,0 +1,71 @@
+ - alias: ZB badroom ON/OFF
+   initial_state: 'on'
+   trigger:
+     platform: state
+     entity_id: sensor.0xd0cf5efffe276402_action
+     to: 'toggle'
+   action:
+     entity_id: light.0x000b57fffe307869_light
+     service: light.toggle
+
+ - alias: ZB badroom - dimmer UP
+   initial_state: 'on'
+   trigger:
+      platform: state
+      entity_id: sensor.0xd0cf5efffe276402_action
+      to: 'brightness_up_click'
+   action:
+     - service: light.turn_on
+       entity_id: light.0x000b57fffe307869_light
+       data_template:
+         brightness: >
+             {% set suggested = states.sensor.zb_ikea_lamp_badkamer_linkquality.attributes.brightness|int + 31 %}
+             {% if suggested < 25 %}
+             {{ suggested }}
+             {% else %}
+             255
+             {% endif %}
+         transition: 1     
+ - alias: ZB badroom - dimmer UP fast
+   initial_state: 'on'
+   trigger:
+      platform: state
+      entity_id: sensor.0xd0cf5efffe276402_action
+      to: 'brightness_up_hold'
+   action:
+     - service: light.turn_on
+       entity_id: light.0x000b57fffe307869_light
+       data_template:
+         brightness: 255
+         transition: 3
+             
+ - alias: ZB badroom - dimmer DOWN
+   initial_state: 'on'
+   trigger:
+      platform: state
+      entity_id: sensor.0xd0cf5efffe276402_action
+      to: 'brightness_down_click'
+   action:
+     - service: light.turn_on
+       entity_id: light.0x000b57fffe307869_light
+       data_template:
+         brightness: >
+             {% set suggested = states.sensor.zb_ikea_lamp_badkamer_linkquality.attributes.brightness|int - 31 %}
+             {% if suggested > 25 %}
+             {{ suggested }}
+             {% else %}
+             15
+             {% endif %} 
+         transition: 1    
+ - alias: ZB badroom - dimmer DOWN fast
+   initial_state: 'on'
+   trigger:
+      platform: state
+      entity_id: sensor.0xd0cf5efffe276402_action
+      to: 'brightness_down_hold'
+   action:
+     - service: light.turn_on
+       entity_id: light.0x000b57fffe307869_light
+       data_template:
+         brightness: 10
+         transition: 3

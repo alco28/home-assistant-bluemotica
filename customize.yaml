@@ -1,2 +1,6 @@
 switch.badkamer_ventilator:
   icon: mdi:fan
+sensor.disk_use_percent:
+  friendly_name: Disk use (percent)
+input_boolean.vakantie_verlichting:
+  icon: mdi:beach

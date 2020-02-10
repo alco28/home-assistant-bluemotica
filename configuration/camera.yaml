@@ -1,24 +1,38 @@
-# - platform: mjpeg
+
+#- platform: ffmpeg
+#  name: Oprit
+#  input: -rtsp_transport tcp -i !secret opritcam_url
+#  input: -rtsp_transport tcp -i rtsp://192.168.1.155:554/user=admin&password=Hoeve33&channel=1&stream=1.sdp?
+
+# - platform: onvif
+  # username: !secret opritcam_name
+  # password: !secret opritcam_pass
+  # port: 8080
+  # host: !secret opritcam_url
+  # profile: 1
+  # name: Oprit
+  
+#- platform: onvif
+#  username: !secret deurcam_name
+#  password: !secret deurcam_pass
+#  port: 8080
+##  host: !secret deurcam_url
+#  #profile: 2
+#  name: Deur
+
+# - platform: onvif
+  # username: !secret tuincam_name
+  # password: !secret tuincam_pass
+  # port: 8899
+  # host: !secret tuincam_url
+  # profile: 2
   # name: tuin
-  # mjpeg_url: !secret tuincam_url
+  
 
-- platform: ffmpeg
-  name: Oprit
-  input: -rtsp_transport tcp -i !secret opritcam_url
-  # input: -rtsp_transport tcp -i rtsp://192.168.1.155:554/user=admin&password=Hoeve33&channel=1&stream=1.sdp?
-
-- platform: onvif
+- platform: generic
+  name: voordeur
+  #stream_source: rtsp://192.168.1.151:554/user=nano&password=Wcz@~6oapy&channel=1&stream=1.sdp?
+  stream_source: rtsp://192.168.1.151:554
+  still_image_url: http://192.168.1.151:1099/web/auto.jpg?-usr=nano&amp;-pwd=Wcz@~6oapy&amp
   username: !secret deurcam_name
   password: !secret deurcam_pass
-  port: 8080
-  host: 192.168.1.151
-  profile: 2
-  name: Deur
-
-# host (Required): An IP or hostname of the camera.
-# name (Optional): Override the name of your camera.
-# username (Optional): The username for the camera.
-# password (Optional): The password for the camera.
-# port (Optional): The port for the camera. This defaults to 5000.
-# profile (Optional): Video profile that will be used to obtain the stream. This defaults to 0. More details below.
-# extra_arguments (Optional): Extra options to pass to ffmpeg, e.g., image quality 

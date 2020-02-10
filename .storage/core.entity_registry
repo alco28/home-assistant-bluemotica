@@ -2,8 +2,8 @@
     "data": {
         "entities": [
             {
-                "config_entry_id": null,
-                "device_id": null,
+                "config_entry_id": "2e33ac0e6d9e44ef9dbf7f5f7f5f05a6",
+                "device_id": "ebc9d37e7de14652b374e022144eddef",
                 "disabled_by": null,
                 "entity_id": "media_player.huiskamer",
                 "name": null,
@@ -15,7 +15,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.pws_precip_1d",
-                "name": null,
+                "name": "Regen kans",
                 "platform": "wunderground",
                 "unique_id": "@6.000000,52.382400,precip_1d"
             },
@@ -24,7 +24,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.pws_weather_1d",
-                "name": null,
+                "name": "Voorspelling",
                 "platform": "wunderground",
                 "unique_id": "@6.000000,52.382400,weather_1d"
             },
@@ -41,145 +41,1441 @@
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.wandevice_kbytesec_sent",
+                "entity_id": "sensor.pws_weather_1d_2",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_kbyte/sec_sent"
+                "platform": "wunderground",
+                "unique_id": "@6.006000,52.382400,weather_1d"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.wandevice_packetssec_received",
+                "entity_id": "sensor.pws_precip_1d_2",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_packets/sec_received"
+                "platform": "wunderground",
+                "unique_id": "@6.006000,52.382400,precip_1d"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.wandevice_packets_received",
+                "entity_id": "sensor.pws_alerts_2",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_packets_received"
+                "platform": "wunderground",
+                "unique_id": "@6.006000,52.382400,alerts"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "b6d2781376db4d93afe9490728cb28e7",
+                "disabled_by": null,
+                "entity_id": "sensor.0x000b57fffe277520_brightness",
+                "name": "Ikea zigbee dimmer",
+                "platform": "mqtt",
+                "unique_id": "0x000b57fffe277520_brightness_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "b6d2781376db4d93afe9490728cb28e7",
+                "disabled_by": null,
+                "entity_id": "sensor.0x000b57fffe277520_battery",
+                "name": "Ikea zigbee dimmer batt",
+                "platform": "mqtt",
+                "unique_id": "0x000b57fffe277520_battery_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "1ea04c1eb38c4fcca1a429e13d3e2630",
+                "disabled_by": null,
+                "entity_id": "light.0x000b57fffe307869_light",
+                "name": "IKEA zigbee badkamer",
+                "platform": "mqtt",
+                "unique_id": "0x000b57fffe307869_light_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "66f4126f417746748943c67cd0dd7fa3",
+                "disabled_by": null,
+                "entity_id": "sensor.0xd0cf5efffe276402_action",
+                "name": "ZB_ikea_knop_badkamer_action",
+                "platform": "mqtt",
+                "unique_id": "0xd0cf5efffe276402_action_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "b6d2781376db4d93afe9490728cb28e7",
+                "disabled_by": null,
+                "entity_id": "sensor.zb_ikea_dimknop_action",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x000b57fffe277520_action_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "b6d2781376db4d93afe9490728cb28e7",
+                "disabled_by": null,
+                "entity_id": "sensor.zb_ikea_dimknop_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x000b57fffe277520_linkquality_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "66f4126f417746748943c67cd0dd7fa3",
+                "disabled_by": null,
+                "entity_id": "sensor.zb_ikea_knop_badkamer_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0xd0cf5efffe276402_linkquality_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "1ea04c1eb38c4fcca1a429e13d3e2630",
+                "disabled_by": null,
+                "entity_id": "sensor.zb_ikea_lamp_badkamer_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x000b57fffe307869_linkquality_zigbee2mqtt"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.wandevice_bytes_received",
+                "entity_id": "sensor.pws_weather_1d_3",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_bytes_received"
+                "platform": "wunderground",
+                "unique_id": "@6.006365,52.191267,weather_1d"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.wandevice_packetssec_sent",
+                "entity_id": "sensor.pws_precip_1d_3",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_packets/sec_sent"
+                "platform": "wunderground",
+                "unique_id": "@6.006365,52.191267,precip_1d"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.wandevice_packets_sent",
+                "entity_id": "sensor.pws_alerts_3",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_packets_sent"
+                "platform": "wunderground",
+                "unique_id": "@6.006365,52.191267,alerts"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ce022be9ec55499690b70246bba5ee27",
+                "disabled_by": null,
+                "entity_id": "binary_sensor.0x00158d000257a9fb_occupancy",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d000257a9fb_occupancy_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ce022be9ec55499690b70246bba5ee27",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d000257a9fb_illuminance",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d000257a9fb_illuminance_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ce022be9ec55499690b70246bba5ee27",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d000257a9fb_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d000257a9fb_battery_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ce022be9ec55499690b70246bba5ee27",
+                "disabled_by": null,
+                "entity_id": "sensor.0x00158d000257a9fb_linkquality",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0x00158d000257a9fb_linkquality_zigbee2mqtt"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.wandevice_kbytesec_received",
+                "entity_id": "binary_sensor.updater",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_kbyte/sec_received"
+                "platform": "updater",
+                "unique_id": "updater"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "2a96a1f46e9644609745ee4e6e879b82",
+                "disabled_by": null,
+                "entity_id": "device_tracker.emoncms",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "b8:27:eb:6a:78:41-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "fb30a546aeba49979638e58c067dc2ac",
+                "disabled_by": null,
+                "entity_id": "device_tracker.subwoofer_switch_huiskamer",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "80:7d:3a:67:96:21-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "f3675453068249d9884e9783390c89b7",
+                "disabled_by": null,
+                "entity_id": "device_tracker.nas",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:11:32:6c:d4:19-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "ec48f330f0cf4db9abb416267445b084",
+                "disabled_by": null,
+                "entity_id": "device_tracker.bluemotica",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "b8:27:eb:4f:73:76-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "31307855380549fb95868f2ea93e1713",
+                "disabled_by": null,
+                "entity_id": "device_tracker.cctv_oprit",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:12:17:2b:d7:42-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4f9b8c2fd14e4191b3ea6ee7ecaaa915",
+                "disabled_by": null,
+                "entity_id": "device_tracker.voordeur_camera",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:fc:fd:01:b3:64-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d739cefca12045e9a27436ccf56b1b1b",
+                "disabled_by": null,
+                "entity_id": "device_tracker.camera_tuin",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "ec:3d:fd:b4:ad:bf-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "07877ebf232e4a5f924a290bb8d69080",
+                "disabled_by": null,
+                "entity_id": "device_tracker.chromecast",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "48:d6:d5:e6:9f:2c-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "dab7904b4e36408c9fb382cc03cd1e40",
+                "disabled_by": null,
+                "entity_id": "device_tracker.omvormer_serre",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "f0:fe:6b:7a:35:d1-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d3f65230e5fb410da1ee1aa525abcf9b",
+                "disabled_by": null,
+                "entity_id": "device_tracker.evohome_www_server",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:d0:2d:80:6a:8a-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "8ac4b673257f410fbdce5cdbf27549a6",
+                "disabled_by": null,
+                "entity_id": "device_tracker.smartmeter_p1",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "18:fe:34:fe:76:7c-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "897fc59824454c8c8ec954414b7fd5f1",
+                "disabled_by": null,
+                "entity_id": "device_tracker.fontein_2",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "5c:cf:7f:9f:28:0d-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "b93a153fb02148f6917290b98c9c4e5b",
+                "disabled_by": null,
+                "entity_id": "device_tracker.harmonyhub",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:04:20:ef:86:40-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "1d5857974a4f46d58b4f6cce6906f220",
+                "disabled_by": null,
+                "entity_id": "device_tracker.opensprinkler",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:0f:00:43:ea:29-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "83f94563889c4243a5f2f2d2f50fd255",
+                "disabled_by": null,
+                "entity_id": "device_tracker.router",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "f0:9f:c2:05:a0:5f"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "36184a19834e4b2b8d5af4a914cda6e4",
+                "disabled_by": null,
+                "entity_id": "device_tracker.ap_huiskamer",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "18:e8:29:9c:7e:a1"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "1db527d3fd63474e8e88f5e6c5655c7e",
+                "disabled_by": null,
+                "entity_id": "device_tracker.omvormer_zolder",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "ac:cf:23:17:03:19-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d50a6cb71cb54e119e158c653a6ccd30",
+                "disabled_by": null,
+                "entity_id": "device_tracker.hannet_gsm",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "34:2d:0d:ef:ca:11-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "f7db2d605fd748f3b6c4ac0444f548ba",
+                "disabled_by": null,
+                "entity_id": "device_tracker.home_assistant",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "b8:27:eb:8c:27:f7-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d51013efa0d34378b263b4a441e3f160",
+                "disabled_by": null,
+                "entity_id": "device_tracker.kinder_tablet",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "2c:fd:ab:11:bd:f6-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "899a98a243644eee829005fe58f271e2",
+                "disabled_by": null,
+                "entity_id": "device_tracker.tablet_hannet",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "c0:d3:c0:50:d2:17-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "00f2b02cf6a844a6b55bd7ba01db4837",
+                "disabled_by": null,
+                "entity_id": "device_tracker.nvr",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:12:17:03:7b:66-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "90efe21b43ef41a2a31efb9c58dc2cf4",
+                "disabled_by": null,
+                "entity_id": "device_tracker.woonkamer",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:e0:4c:01:60:a0-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4b691fe145be4835a8b5adb41d640369",
+                "disabled_by": null,
+                "entity_id": "device_tracker.avn_2",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "6c:c7:ec:59:dd:fd-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "a78d65434c254f6b882018e6f1800f0f",
+                "disabled_by": null,
+                "entity_id": "device_tracker.ticwatch_alco",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "98:28:a6:eb:6f:e7-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "57a7d4c460394c75bc2958f98cda3177",
+                "disabled_by": null,
+                "entity_id": "device_tracker.atlas_pc_alco",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "f4:6d:04:22:64:82-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "2cf0c7bb18184503a26fc9e4c9920477",
+                "disabled_by": null,
+                "entity_id": "device_tracker.dnb88123",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "68:ec:c5:34:e3:1a-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "63b62640a0bc4dd0b95a069e4ba2a9f7",
+                "disabled_by": null,
+                "entity_id": "device_tracker.avn_ir",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:28:f8:39:b3:ef-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "88dd886ec3694a25b3c4d7169a01ddf2",
+                "disabled_by": null,
+                "entity_id": "device_tracker.tablet_eef",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "a8:81:95:de:0d:18-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4aabda34e2114d3899e42abbc1a579f0",
+                "disabled_by": null,
+                "entity_id": "device_tracker.mobiel_eef",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "b0:a2:e7:1b:10:71-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "39001924660242dbaebad515105caa98",
+                "disabled_by": null,
+                "entity_id": "device_tracker.hp_laptop",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "00:1a:73:e6:80:78-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "24f139e3111849d597092760561a56fd",
+                "disabled_by": null,
+                "entity_id": "device_tracker.unifi_9c_b6_54_e5_b2_bb_default",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "9c:b6:54:e5:b2:bb-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "e237d1cce5474fb689b80f11175eec7f",
+                "disabled_by": null,
+                "entity_id": "device_tracker.android_eed7fa876d44dbf4",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "ce:75:2d:da:ce:44-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": null,
+                "entity_id": "device_tracker.tempsensor_ketel",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "5c:cf:7f:c8:82:32-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "96460fd6d8ec462780bc35f9fcdf4d84",
+                "disabled_by": null,
+                "entity_id": "device_tracker.wii",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "78:a2:a0:8e:a3:22-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "b8bf19c5e2fd4065a958af3d8dd7c0e5",
+                "disabled_by": null,
+                "entity_id": "device_tracker.dnb_laptop_kabel",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "b4:b6:86:23:60:4a-default"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.wandevice_bytes_sent",
+                "entity_id": "climate.thuis",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B_bytes_sent"
+                "platform": "evohome",
+                "unique_id": "1403096"
             },
             {
-                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.archer_c2_kbytesec_sent",
+                "entity_id": "climate.woonkamer",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_kbyte/sec_sent"
+                "platform": "evohome",
+                "unique_id": "1403336"
             },
             {
-                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "sensor.archer_c2_bytes_sent",
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "00f2b02cf6a844a6b55bd7ba01db4837",
+                "disabled_by": "integration",
+                "entity_id": "sensor.nvr_tx",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_bytes_sent"
+                "platform": "unifi",
+                "unique_id": "tx-00:12:17:03:7b:66"
             },
             {
-                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "sensor.archer_c2_kbytesec_received",
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "39001924660242dbaebad515105caa98",
+                "disabled_by": "integration",
+                "entity_id": "sensor.hp_laptop_tx",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_kbyte/sec_received"
+                "platform": "unifi",
+                "unique_id": "tx-00:1a:73:e6:80:78"
             },
             {
-                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "sensor.archer_c2_bytes_received",
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "90efe21b43ef41a2a31efb9c58dc2cf4",
+                "disabled_by": "integration",
+                "entity_id": "sensor.woonkamer_rx",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_bytes_received"
+                "platform": "unifi",
+                "unique_id": "rx-00:e0:4c:01:60:a0"
             },
             {
-                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "sensor.archer_c2_packetssec_sent",
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "24f139e3111849d597092760561a56fd",
+                "disabled_by": "integration",
+                "entity_id": "sensor.hp_deskjet_wifi_rx",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets/sec_sent"
+                "platform": "unifi",
+                "unique_id": "rx-9c:b6:54:e5:b2:bb"
             },
             {
-                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "sensor.archer_c2_packets_sent",
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "90efe21b43ef41a2a31efb9c58dc2cf4",
+                "disabled_by": "integration",
+                "entity_id": "sensor.woonkamer_tx",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets_sent"
+                "platform": "unifi",
+                "unique_id": "tx-00:e0:4c:01:60:a0"
             },
             {
-                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "sensor.archer_c2_packets_received",
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "e237d1cce5474fb689b80f11175eec7f",
+                "disabled_by": "integration",
+                "entity_id": "sensor.android_eed7fa876d44dbf4_rx",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets_received"
+                "platform": "unifi",
+                "unique_id": "rx-ce:75:2d:da:ce:44"
             },
             {
-                "config_entry_id": "577a09d20fcd441f966def58f72fe2f0",
-                "device_id": null,
-                "disabled_by": null,
-                "entity_id": "sensor.archer_c2_packetssec_received",
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4b691fe145be4835a8b5adb41d640369",
+                "disabled_by": "integration",
+                "entity_id": "sensor.avn_rx",
                 "name": null,
-                "platform": "upnp",
-                "unique_id": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37_packets/sec_received"
+                "platform": "unifi",
+                "unique_id": "rx-6c:c7:ec:59:dd:fd"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "96460fd6d8ec462780bc35f9fcdf4d84",
+                "disabled_by": "integration",
+                "entity_id": "sensor.wii_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-78:a2:a0:8e:a3:22"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4b691fe145be4835a8b5adb41d640369",
+                "disabled_by": "integration",
+                "entity_id": "sensor.avn_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-6c:c7:ec:59:dd:fd"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "b8bf19c5e2fd4065a958af3d8dd7c0e5",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dnb_laptop_kabel_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-b4:b6:86:23:60:4a"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "a78d65434c254f6b882018e6f1800f0f",
+                "disabled_by": "integration",
+                "entity_id": "sensor.ticwatch_alco_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-98:28:a6:eb:6f:e7"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "a78d65434c254f6b882018e6f1800f0f",
+                "disabled_by": "integration",
+                "entity_id": "sensor.ticwatch_alco_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-98:28:a6:eb:6f:e7"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "57a7d4c460394c75bc2958f98cda3177",
+                "disabled_by": "integration",
+                "entity_id": "sensor.atlas_pc_alco_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-f4:6d:04:22:64:82"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "57a7d4c460394c75bc2958f98cda3177",
+                "disabled_by": "integration",
+                "entity_id": "sensor.atlas_pc_alco_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-f4:6d:04:22:64:82"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "2cf0c7bb18184503a26fc9e4c9920477",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dnb_laptop_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-68:ec:c5:34:e3:1a"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "2cf0c7bb18184503a26fc9e4c9920477",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dnb_laptop_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-68:ec:c5:34:e3:1a"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "63b62640a0bc4dd0b95a069e4ba2a9f7",
+                "disabled_by": "integration",
+                "entity_id": "sensor.avn_ir_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:28:f8:39:b3:ef"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d3f65230e5fb410da1ee1aa525abcf9b",
+                "disabled_by": "integration",
+                "entity_id": "sensor.evohome_www_server_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-00:d0:2d:80:6a:8a"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "63b62640a0bc4dd0b95a069e4ba2a9f7",
+                "disabled_by": "integration",
+                "entity_id": "sensor.avn_ir_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-00:28:f8:39:b3:ef"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "1db527d3fd63474e8e88f5e6c5655c7e",
+                "disabled_by": "integration",
+                "entity_id": "sensor.omvormer_zolder_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-ac:cf:23:17:03:19"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "88dd886ec3694a25b3c4d7169a01ddf2",
+                "disabled_by": "integration",
+                "entity_id": "sensor.tablet_eef_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-a8:81:95:de:0d:18"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "1db527d3fd63474e8e88f5e6c5655c7e",
+                "disabled_by": "integration",
+                "entity_id": "sensor.omvormer_zolder_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-ac:cf:23:17:03:19"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "88dd886ec3694a25b3c4d7169a01ddf2",
+                "disabled_by": "integration",
+                "entity_id": "sensor.tablet_eef_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-a8:81:95:de:0d:18"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d50a6cb71cb54e119e158c653a6ccd30",
+                "disabled_by": "integration",
+                "entity_id": "sensor.galaxy_j5_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-34:2d:0d:ef:ca:11"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4aabda34e2114d3899e42abbc1a579f0",
+                "disabled_by": "integration",
+                "entity_id": "sensor.mobiel_eef_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-b0:a2:e7:1b:10:71"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d50a6cb71cb54e119e158c653a6ccd30",
+                "disabled_by": "integration",
+                "entity_id": "sensor.galaxy_j5_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-34:2d:0d:ef:ca:11"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4aabda34e2114d3899e42abbc1a579f0",
+                "disabled_by": "integration",
+                "entity_id": "sensor.mobiel_eef_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-b0:a2:e7:1b:10:71"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "24f139e3111849d597092760561a56fd",
+                "disabled_by": "integration",
+                "entity_id": "sensor.hp_deskjet_wifi_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-9c:b6:54:e5:b2:bb"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "f7db2d605fd748f3b6c4ac0444f548ba",
+                "disabled_by": "integration",
+                "entity_id": "sensor.home_assistant_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-b8:27:eb:8c:27:f7"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "39001924660242dbaebad515105caa98",
+                "disabled_by": "integration",
+                "entity_id": "sensor.hp_laptop_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:1a:73:e6:80:78"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "e237d1cce5474fb689b80f11175eec7f",
+                "disabled_by": "integration",
+                "entity_id": "sensor.android_eed7fa876d44dbf4_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-ce:75:2d:da:ce:44"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "f7db2d605fd748f3b6c4ac0444f548ba",
+                "disabled_by": "integration",
+                "entity_id": "sensor.home_assistant_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-b8:27:eb:8c:27:f7"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "96460fd6d8ec462780bc35f9fcdf4d84",
+                "disabled_by": "integration",
+                "entity_id": "sensor.wii_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-78:a2:a0:8e:a3:22"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d51013efa0d34378b263b4a441e3f160",
+                "disabled_by": "integration",
+                "entity_id": "sensor.kinder_tablet_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-2c:fd:ab:11:bd:f6"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "b8bf19c5e2fd4065a958af3d8dd7c0e5",
+                "disabled_by": "integration",
+                "entity_id": "sensor.dnb_laptop_kabel_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-b4:b6:86:23:60:4a"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d51013efa0d34378b263b4a441e3f160",
+                "disabled_by": "integration",
+                "entity_id": "sensor.kinder_tablet_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-2c:fd:ab:11:bd:f6"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "899a98a243644eee829005fe58f271e2",
+                "disabled_by": "integration",
+                "entity_id": "sensor.tablet_hannet_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-c0:d3:c0:50:d2:17"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "899a98a243644eee829005fe58f271e2",
+                "disabled_by": "integration",
+                "entity_id": "sensor.tablet_hannet_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-c0:d3:c0:50:d2:17"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "2a96a1f46e9644609745ee4e6e879b82",
+                "disabled_by": "integration",
+                "entity_id": "sensor.emoncms_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-b8:27:eb:6a:78:41"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "2a96a1f46e9644609745ee4e6e879b82",
+                "disabled_by": "integration",
+                "entity_id": "sensor.emoncms_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-b8:27:eb:6a:78:41"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "fb30a546aeba49979638e58c067dc2ac",
+                "disabled_by": "integration",
+                "entity_id": "sensor.subwoofer_switch_huiskamer_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-80:7d:3a:67:96:21"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "fb30a546aeba49979638e58c067dc2ac",
+                "disabled_by": "integration",
+                "entity_id": "sensor.subwoofer_switch_huiskamer_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-80:7d:3a:67:96:21"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "f3675453068249d9884e9783390c89b7",
+                "disabled_by": "integration",
+                "entity_id": "sensor.nas_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:11:32:6c:d4:19"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "f3675453068249d9884e9783390c89b7",
+                "disabled_by": "integration",
+                "entity_id": "sensor.nas_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-00:11:32:6c:d4:19"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "897fc59824454c8c8ec954414b7fd5f1",
+                "disabled_by": "integration",
+                "entity_id": "sensor.fontein_2_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-5c:cf:7f:9f:28:0d"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "ec48f330f0cf4db9abb416267445b084",
+                "disabled_by": "integration",
+                "entity_id": "sensor.bluemotica_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-b8:27:eb:4f:73:76"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "ec48f330f0cf4db9abb416267445b084",
+                "disabled_by": "integration",
+                "entity_id": "sensor.bluemotica_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-b8:27:eb:4f:73:76"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "897fc59824454c8c8ec954414b7fd5f1",
+                "disabled_by": "integration",
+                "entity_id": "sensor.fontein_2_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-5c:cf:7f:9f:28:0d"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "31307855380549fb95868f2ea93e1713",
+                "disabled_by": "integration",
+                "entity_id": "sensor.cctv_oprit_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:12:17:2b:d7:42"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "31307855380549fb95868f2ea93e1713",
+                "disabled_by": "integration",
+                "entity_id": "sensor.cctv_oprit_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-00:12:17:2b:d7:42"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": "integration",
+                "entity_id": "sensor.tempsensor_ketel_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-5c:cf:7f:c8:82:32"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d739cefca12045e9a27436ccf56b1b1b",
+                "disabled_by": "integration",
+                "entity_id": "sensor.camera_tuin_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-ec:3d:fd:b4:ad:bf"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d739cefca12045e9a27436ccf56b1b1b",
+                "disabled_by": "integration",
+                "entity_id": "sensor.camera_tuin_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-ec:3d:fd:b4:ad:bf"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": "integration",
+                "entity_id": "sensor.tempsensor_ketel_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-5c:cf:7f:c8:82:32"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "07877ebf232e4a5f924a290bb8d69080",
+                "disabled_by": "integration",
+                "entity_id": "sensor.chromecast_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-48:d6:d5:e6:9f:2c"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "b93a153fb02148f6917290b98c9c4e5b",
+                "disabled_by": "integration",
+                "entity_id": "sensor.harmonyhub_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:04:20:ef:86:40"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "07877ebf232e4a5f924a290bb8d69080",
+                "disabled_by": "integration",
+                "entity_id": "sensor.chromecast_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-48:d6:d5:e6:9f:2c"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "b93a153fb02148f6917290b98c9c4e5b",
+                "disabled_by": "integration",
+                "entity_id": "sensor.harmonyhub_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-00:04:20:ef:86:40"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "dab7904b4e36408c9fb382cc03cd1e40",
+                "disabled_by": "integration",
+                "entity_id": "sensor.omvormer_serre_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-f0:fe:6b:7a:35:d1"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "1d5857974a4f46d58b4f6cce6906f220",
+                "disabled_by": "integration",
+                "entity_id": "sensor.opensprinkler_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:0f:00:43:ea:29"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "dab7904b4e36408c9fb382cc03cd1e40",
+                "disabled_by": "integration",
+                "entity_id": "sensor.omvormer_serre_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-f0:fe:6b:7a:35:d1"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "1d5857974a4f46d58b4f6cce6906f220",
+                "disabled_by": "integration",
+                "entity_id": "sensor.opensprinkler_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-00:0f:00:43:ea:29"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "8ac4b673257f410fbdce5cdbf27549a6",
+                "disabled_by": "integration",
+                "entity_id": "sensor.smartmeter_p1_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-18:fe:34:fe:76:7c"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4f9b8c2fd14e4191b3ea6ee7ecaaa915",
+                "disabled_by": "integration",
+                "entity_id": "sensor.voordeur_camera_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:fc:fd:01:b3:64"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "8ac4b673257f410fbdce5cdbf27549a6",
+                "disabled_by": "integration",
+                "entity_id": "sensor.smartmeter_p1_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-18:fe:34:fe:76:7c"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "4f9b8c2fd14e4191b3ea6ee7ecaaa915",
+                "disabled_by": "integration",
+                "entity_id": "sensor.voordeur_camera_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-00:fc:fd:01:b3:64"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "d3f65230e5fb410da1ee1aa525abcf9b",
+                "disabled_by": "integration",
+                "entity_id": "sensor.evohome_www_server_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:d0:2d:80:6a:8a"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "00f2b02cf6a844a6b55bd7ba01db4837",
+                "disabled_by": "integration",
+                "entity_id": "sensor.nvr_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-00:12:17:03:7b:66"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "95fa49da808e4554ba7e3607b7e78763",
+                "disabled_by": null,
+                "entity_id": "device_tracker.unifi_b8_27_eb_df_46_31_default",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "b8:27:eb:df:46:31-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "95fa49da808e4554ba7e3607b7e78763",
+                "disabled_by": "integration",
+                "entity_id": "sensor.none_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-b8:27:eb:df:46:31"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "95fa49da808e4554ba7e3607b7e78763",
+                "disabled_by": "integration",
+                "entity_id": "sensor.none_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-b8:27:eb:df:46:31"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "66f4126f417746748943c67cd0dd7fa3",
+                "disabled_by": null,
+                "entity_id": "sensor.zb_ikea_knop_badkamer_battery",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "0xd0cf5efffe276402_battery_zigbee2mqtt"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": "user",
+                "entity_id": "device_tracker.unifi_60_01_94_73_67_9c_default",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "60:01:94:73:67:9c-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": "integration",
+                "entity_id": "sensor.none_tx_2",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-60:01:94:73:67:9c"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": "integration",
+                "entity_id": "sensor.none_rx_2",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-60:01:94:73:67:9c"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": null,
+                "entity_id": "light.aquarium_d1",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "73679C_LI_1"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": null,
+                "entity_id": "light.aquarium",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "73679C_LI_2"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": null,
+                "entity_id": "sensor.aquarium_d1_status",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "73679C_status"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": null,
+                "entity_id": "sensor.keteltemp_ds18b20_1_id",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "C88232_DS18B20-1_Id"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": null,
+                "entity_id": "sensor.keteltemp_ds18b20_1_temperature",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "C88232_DS18B20-1_Temperature"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": null,
+                "entity_id": "sensor.keteltemp_ds18b20_2_id",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "C88232_DS18B20-2_Id"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": null,
+                "entity_id": "sensor.keteltemp_ds18b20_2_temperature",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "C88232_DS18B20-2_Temperature"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": null,
+                "entity_id": "sensor.keteltemp_ds18b20_3_id",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "C88232_DS18B20-3_Id"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": null,
+                "entity_id": "sensor.keteltemp_ds18b20_3_temperature",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "C88232_DS18B20-3_Temperature"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "ae94c764e1854cd6b1b1d7df3ce9d331",
+                "disabled_by": null,
+                "entity_id": "sensor.keteltemp_status",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "C88232_status"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": null,
+                "entity_id": "sensor.aquarium_d1_ds18b20_id",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "73679C_DS18B20_Id"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": null,
+                "entity_id": "sensor.aquarium_d1_ds18b20_temperature",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "73679C_DS18B20_Temperature"
+            },
+            {
+                "config_entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "device_id": "9ed6fcc7a4b1464881809388908d7f3e",
+                "disabled_by": null,
+                "entity_id": "switch.aquarium_d1",
+                "name": null,
+                "platform": "mqtt",
+                "unique_id": "73679C_RL_1"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "026fab3a81ee4b559621a036c1abe341",
+                "disabled_by": null,
+                "entity_id": "device_tracker.iphone_hannet",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "f8:1e:df:a4:ec:82-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "026fab3a81ee4b559621a036c1abe341",
+                "disabled_by": "integration",
+                "entity_id": "sensor.iphone_hannet_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-f8:1e:df:a4:ec:82"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "026fab3a81ee4b559621a036c1abe341",
+                "disabled_by": "integration",
+                "entity_id": "sensor.iphone_hannet_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-f8:1e:df:a4:ec:82"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "a8f61ceb6c9444129e70c0aa3578cd63",
+                "disabled_by": null,
+                "entity_id": "device_tracker.unifi_f0_1f_af_6a_38_ec_default",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "f0:1f:af:6a:38:ec-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "a8f61ceb6c9444129e70c0aa3578cd63",
+                "disabled_by": "integration",
+                "entity_id": "sensor.none_rx_3",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-f0:1f:af:6a:38:ec"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "a8f61ceb6c9444129e70c0aa3578cd63",
+                "disabled_by": "integration",
+                "entity_id": "sensor.none_tx_3",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-f0:1f:af:6a:38:ec"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "cb5b489454734d7e967b6fd4b4e748d5",
+                "disabled_by": null,
+                "entity_id": "device_tracker.laptop_wnk",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "c4:d9:87:16:87:35-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "cb5b489454734d7e967b6fd4b4e748d5",
+                "disabled_by": "integration",
+                "entity_id": "sensor.laptop_wnk_rx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-c4:d9:87:16:87:35"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "cb5b489454734d7e967b6fd4b4e748d5",
+                "disabled_by": "integration",
+                "entity_id": "sensor.laptop_wnk_tx",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-c4:d9:87:16:87:35"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "99f186680fe84bdfb67a5fb89fd1165e",
+                "disabled_by": null,
+                "entity_id": "device_tracker.unifi_b8_27_eb_23_42_ef_default",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "b8:27:eb:23:42:ef-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "99f186680fe84bdfb67a5fb89fd1165e",
+                "disabled_by": "integration",
+                "entity_id": "sensor.none_tx_4",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-b8:27:eb:23:42:ef"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "99f186680fe84bdfb67a5fb89fd1165e",
+                "disabled_by": "integration",
+                "entity_id": "sensor.none_rx_4",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-b8:27:eb:23:42:ef"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "452e60a696884c2a8a7cb3cf37c987aa",
+                "disabled_by": null,
+                "entity_id": "device_tracker.avn_3",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "f6:89:e1:2e:5a:cc-default"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "452e60a696884c2a8a7cb3cf37c987aa",
+                "disabled_by": "integration",
+                "entity_id": "sensor.avn_tx_2",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "tx-f6:89:e1:2e:5a:cc"
+            },
+            {
+                "config_entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "device_id": "452e60a696884c2a8a7cb3cf37c987aa",
+                "disabled_by": "integration",
+                "entity_id": "sensor.avn_rx_2",
+                "name": null,
+                "platform": "unifi",
+                "unique_id": "rx-f6:89:e1:2e:5a:cc"
             }
         ]
     },

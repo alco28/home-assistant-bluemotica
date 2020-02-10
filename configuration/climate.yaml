@@ -1,4 +1,19 @@
-platform: honeywell
-username: !secret honeywell_user
-password: !secret honeywell_pass
-scan_interval: 900
+# platform: honeywell
+# username: !secret honeywell_user
+# password: !secret honeywell_pass
+# scan_interval: 900
+
+ platform: evohome
+ username: !secret honeywell_user
+ password: secret honeywell_pass
+
+# These config parameters are presented with their default values...
+   scan_interval: 600     # seconds, you might get away with 180
+   high_precision: true   # temperature in tenths instead of halves
+# location_idx: 0        # if you have more than 1 location, use this
+
+# These config parameters are YMMV...
+# use_heuristics: false  # this is for the highly adventurous person, YMMV
+ use_schedules: true   # this is for the slightly adventurous person
+# away_temp: 15.0        # °C, if you have a non-default Away temp
+# off_temp: 5.0          # °C, if you have a non-default Heating Off temp

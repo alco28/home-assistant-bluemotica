@@ -3,10 +3,16 @@
         "entries": [
             {
                 "connection_class": "local_push",
-                "data": {},
+                "data": {
+                    "user_id": "75e969f83c284d1f9e4a02f798aba317"
+                },
                 "domain": "cast",
                 "entry_id": "2e33ac0e6d9e44ef9dbf7f5f7f5f05a6",
+                "options": {},
                 "source": "discovery",
+                "system_options": {
+                    "disable_new_entities": false
+                },
                 "title": "Google Cast",
                 "version": 1
             },
@@ -15,7 +21,11 @@
                 "data": {},
                 "domain": "mqtt",
                 "entry_id": "7ea6237ccfd44697844048a50fc0a1e1",
+                "options": {},
                 "source": "import",
+                "system_options": {
+                    "disable_new_entities": false
+                },
                 "title": "configuration.yaml",
                 "version": 1
             },
@@ -26,36 +36,34 @@
                 },
                 "domain": "ifttt",
                 "entry_id": "a8005a6393cb405dbab2139dd15726ef",
+                "options": {},
                 "source": "user",
+                "system_options": {
+                    "disable_new_entities": false
+                },
                 "title": "IFTTT Webhook",
                 "version": 1
             },
             {
                 "connection_class": "local_poll",
                 "data": {
-                    "port_mapping": true,
-                    "sensors": true,
-                    "ssdp_description": "http://192.168.1.1:1900/gatedesc.xml",
-                    "udn": "uuid:9f0865b3-f5da-4ad5-85b7-7404637fdf37"
+                    "controller": {
+                        "host": "192.168.1.110",
+                        "password": "8u3G#O_2&528;|K",
+                        "port": 8443,
+                        "site": "default",
+                        "username": "HASSIO",
+                        "verify_ssl": false
+                    }
                 },
-                "domain": "upnp",
-                "entry_id": "577a09d20fcd441f966def58f72fe2f0",
+                "domain": "unifi",
+                "entry_id": "244c8b5b5cdd414492e598c1638d98fc",
+                "options": {},
                 "source": "user",
-                "title": "Archer_C2",
-                "version": 1
-            },
-            {
-                "connection_class": "local_poll",
-                "data": {
-                    "port_mapping": true,
-                    "sensors": false,
-                    "ssdp_description": "http://192.168.1.2:1780/InternetGatewayDevice.xml",
-                    "udn": "uuid:7DD209A9-CA37-96A0-BB82-E8E44DC2970B"
+                "system_options": {
+                    "disable_new_entities": false
                 },
-                "domain": "upnp",
-                "entry_id": "066f4c40ea0d49ec8546727d734c771e",
-                "source": "discovery",
-                "title": null,
+                "title": "Thuisnetwerk",
                 "version": 1
             }
         ]

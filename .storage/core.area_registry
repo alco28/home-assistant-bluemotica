@@ -1,0 +1,40 @@
+{
+    "data": {
+        "areas": [
+            {
+                "id": "90531702aeff4f999e5f1200b6398579",
+                "name": "huiskamer"
+            },
+            {
+                "id": "11c5499fdb904311b7a108f0f4f4f647",
+                "name": "tuin"
+            },
+            {
+                "id": "a85459e17982462d8a6ed9e54e6c7266",
+                "name": "badkamer"
+            },
+            {
+                "id": "bb2f1d1c51304141a62b3d6f9ffd0346",
+                "name": "slaapkamer-1 Rintze"
+            },
+            {
+                "id": "ea9de0ff3be74cf6800832db419dacc5",
+                "name": "slaapkamer-2 Ouders"
+            },
+            {
+                "id": "e09d22f1122c439b8ce9c98eff295da0",
+                "name": "slaapkamer-3 Sylke"
+            },
+            {
+                "id": "84842b8a8793483d9e6ff59bb25ac954",
+                "name": "gang"
+            },
+            {
+                "id": "839020f8e01348118b7696bf054ead4f",
+                "name": "keuken"
+            }
+        ]
+    },
+    "key": "core.area_registry",
+    "version": 1
+}

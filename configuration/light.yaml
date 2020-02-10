@@ -6,7 +6,7 @@
 #   payload_off: "off"
 #   retain: true
 - platform: rfxtrx
-  automatic_add: True
+  automatic_add: false
   devices:
     0b11000517bc0cfe08010f70:
       name: "Keuken bar led"

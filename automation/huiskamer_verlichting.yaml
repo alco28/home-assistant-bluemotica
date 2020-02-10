@@ -1,26 +1,96 @@
+        ##########################################################
+        ## Turn On Lighting at illuminance 15
+        ##########################################################
+
+- alias: Verlichting - Huiskamer AAN bij schemer
+  initial_state: 'off'
+  trigger:
+    - platform: state
+      entity_id: sensor.0x00158d000257a9fb_illuminance
+  condition:
+    - condition:  numeric_state
+      entity_id: sensor.0x00158d000257a9fb_illuminance
+      below: '11'
+    - condition: time
+      after: '18:00:00'
+      before: '23:00:00'
+  action:
+    - service: switch.turn_on
+      entity_id:
+        - switch.kaku_handzender_k1
+   # - delay: '00:{{ range(01,09) | random | int }}:00'
+    - service: light.turn_on
+      data:
+        brightness_pct: 25
+        transition: 10
+        entity_id:
+        - light.gang_spotjes_dimmer
+    - delay: '00:0{{ range(4) | random | int }}:{{ range(10,58) | random | int }}'
 
 
+        ##########################################################
+        ## Turn Off  Lighting at 23:xxpm
+        ##########################################################
 
+- alias: Verlichting - huiskamer UIT om 23:XXu
+  initial_state: 'off'
+  trigger:
+   - platform: time
+     at:   '23:00'
+  condition:
+    - condition: state
+      entity_id: input_boolean.Vakantie_verlichting
+      state: 'on'
 
-# # Turns on lights 1 hour before sunset if people are home
-# # and if people get home between 16:00-23:00
-  # - alias: 'Rule 1 Light on in the evening'
-    # trigger:
-      # # Prefix the first line of each trigger configuration
-      # # with a '-' to enter multiple
-      # - platform: state
-        # entity_id: switch.KaKu_handzender_klein_K2
-        # to: 'on'
-    # condition:
-      # # Prefix the first line of each condition configuration
-      # # with a '-'' to enter multiple
-      # - condition: time
-        # after: '15:00:00'
-        # before: '23:59:00'
-    # action:
-      # # With a single service call, we don't need a '-' before service - though you can if you want to
-      # # service: homeassistant.turn_on
-      # # entity_id: group.living_room
-      # - platform: state
-        # entity_id: switch.kaku_handzender_k1
-        # to: 'on'
+  action:
+    - delay: '00:{{ range(10,40) | random | int }}'
+    - service: switch.turn_off
+      entity_id:
+        - switch.kaku_handzender_k1
+    - service: light.turn_off
+      entity_id:
+        - light.gang_spotjes_dimmer
+    - delay: '00:{{ range(01,10) | random | int }}'
+    - service: light.turn_off
+      data:
+        entity_id:
+        - light.keuken_koffie_led      
+
+- alias: Verlichting - badkamer simulatie AAN
+
+  trigger:
+   - platform: time
+     at:   '23:30'
+  condition:
+    - condition: state
+      entity_id: input_boolean.Vakantie_verlichting
+      state: 'on'
+
+  action:
+    - delay: '00:{{ range(10,15) | random | int }}'
+    - service: light.turn_on
+      data:
+        brightness: 125
+        transition: 5
+        entity_id:
+        - light.0x000b57fffe307869_light
+    - delay: '00:{{ range(01,15) | random | int }}' 
+    - service: light.turn_off
+      entity_id:
+        - light.0x000b57fffe307869_light    
+  
+- alias: Verlichting - alles uit check
+
+  trigger:
+   - platform: time
+     at:   '00:10'
+  condition:
+    - condition: state
+      entity_id: input_boolean.Vakantie_verlichting
+      state: 'on'
+  action:
+   - service: light.turn_off
+     data:
+       entity_id:
+       - group.all_lights
+        

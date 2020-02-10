@@ -3,3 +3,6 @@
  logs:
   homeassistant.components: warn
   # homeassistant.components.rfxtrx: debug
+  custom_components.evohome: warn
+  custom_components.climate.evohome: warn
+  evohomeclient2: warn

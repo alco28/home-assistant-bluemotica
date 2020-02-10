@@ -1,0 +1,16 @@
+{
+    "data": {
+        "access_token": "N5EKYh2FZdgCL0esQR3N2ytbX2h4bTvbzQCO5Dj1PPcUyGlZIZw6L0_uITGYpsD_CmrF2gcknNgXo0cfgPMXuQcfLxeMzQTEEydOSsnld0sKsIsKRrsCV3zCtMkP_kQ89tqL3FbdFqMzY0g7omiHvH1RnCxdhctJEmhOyCMELqzVRx1uNDMRJTSCNMeCp5j3im0NWnL4vfg-HU_mB2v-vi1Qd602MdrjGDGWL8bsD6XEFjicDSy8jvkjif2irv4rAB3_gQr3YzbYrsr9XShdUtchwJiyH2gaJ_VvN3X0V7FCm6iva2gPCrOAM5l31rs0DnEt7XrKvRsbnDW-vJRqOWHoBBt25jWg3xHXrE4bLH6a8cPkBzwzjLbeokpWtnkUaDCcRVhQnnUlGlCmaqHYTYZaBx1A-HZFQEC_YNNrWPNY6csYAijGQ4QWjXnrxU6LBjqaaSTYQ9fiLN5vJ--hqmsoKaKZs-KzfAS5SgBduT0zEytiHYpqXGTmCWNqXJ7irTj28HJL8e6UKU8SRxrfwiExsB15eXeUyyipJCnVcFI6rmU1",
+        "access_token_expires": "2020-02-10T14:17:13+01:00",
+        "refresh_token": "XCueBPTiLBy2_F89Lt-ICuTuSPJRz630qp6eo9PnLV-dbPNqQU5OZTzABJutIeG0X7jBMF3Y72Ptf1yCo1730bU1i8iTTC8v3PcX5bwvpiYtuy-roi38Q5Cjy2G267NAXzODz9PDquIIYSGAlacS7vVo2frJeum_s1S1KWt9pFur9QUs5NcvB1NgJqGBUNhKP3FnEn-OwBn5Bzx0LUYRQrG6ctiG1o-Z_YHIusBlZkZ9kthysK2IbUHATG3xsYVeQvP_zp74m2ZwAVAupq63vEHK1ghRr1CLHmrVNiRwL8ks6Bc2-T-2G2DNaT52lER6FIB4Iufmyw1nXzXRZDTc4YlTVarzoY4ScGezlDadlUaXvvNgkQrzOgpslcXufrDCV-cV01gP42D-xtKsoFLbVBI3LMJtLi-u-R3dUZtctCVDBJq_fAKrpjIZc1FTp6p9FLMQk4Pt1ApTQbj1rw-hm474pF67JIa8at9OV3MD9sjurdjuEYHouUfcQAoNOi3jlfqPzv8aDtuJeI1zISzGJ1Riewbb40-ZkH8uveE2zKaLrW_us9ws0BR4NZRFb9J6t6fuoQ",
+        "user_data": {
+            "sessionId": "B11CD372-9A52-4B83-BF86-33E72537E3EC",
+            "userInfo": {
+                "userID": 1109081
+            }
+        },
+        "username": "a.van.neck@upcmail.nl"
+    },
+    "key": "evohome",
+    "version": 1
+}

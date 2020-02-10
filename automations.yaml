@@ -8,3 +8,24 @@
   action:
   - data: {}
     service: switch.toggle
+- id: '1566200774356'
+  alias: Nieuwe automatisering
+  trigger:
+  - at: '11:00'
+    platform: time
+  condition:
+  - after: '21:00'
+    condition: time
+  action:
+  - delay: '5'
+- id: '1566200910564'
+  alias: Nieuwe automatisering
+  trigger:
+  - payload: 'on'
+    platform: mqtt
+    topic: test
+  condition:
+  - after: '22:00'
+    condition: time
+  action:
+  - delay: '6'

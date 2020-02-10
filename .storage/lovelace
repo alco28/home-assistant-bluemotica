@@ -1,0 +1,771 @@
+{
+    "data": {
+        "config": {
+            "resources": [
+                {
+                    "type": "module",
+                    "url": "/local/button-card.js"
+                },
+                {
+                    "type": "module",
+                    "url": "/local/power-wheel-card.js?v=1"
+                }
+            ],
+            "title": "Hoeve33",
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "light.keukenplafond_dimmer",
+                                    "name": "keukenplafond",
+                                    "type": "light"
+                                },
+                                {
+                                    "color": "rgb(255,225,125)",
+                                    "color_type": "icon",
+                                    "entity": "switch.keukenblok_schakelaar",
+                                    "icon": "mdi:light-switch",
+                                    "name": "keukenblok",
+                                    "size": "141px",
+                                    "type": "custom:button-card"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "color": "rgb(72,81,62)",
+                                    "color_type": "label-card",
+                                    "name": "Keukenverlichting",
+                                    "type": "custom:button-card"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "color": "rgb(154,171,123)",
+                                            "color_type": "card",
+                                            "entity": "light.keuken_bar_led",
+                                            "icon": "mdi:led-strip",
+                                            "name": "bar",
+                                            "size": "60px",
+                                            "type": "custom:button-card"
+                                        },
+                                        {
+                                            "color": "rgb(154,171,123)",
+                                            "color_type": "card",
+                                            "entity": "light.keuken_koffie_led",
+                                            "icon": "mdi:coffee-to-go",
+                                            "name": "koffie",
+                                            "size": "60px",
+                                            "type": "custom:button-card"
+                                        },
+                                        {
+                                            "color": "rgb(154,171,123)",
+                                            "color_type": "card",
+                                            "entity": "light.keukenblok_strip",
+                                            "icon": "mdi:fridge-outline",
+                                            "name": "kast",
+                                            "size": "60px",
+                                            "type": "custom:button-card"
+                                        },
+                                        {
+                                            "color": "rgb(154,171,123)",
+                                            "color_type": "card",
+                                            "entity": "light.keukenplafond_dimmer",
+                                            "icon": "mdi:ceiling-light",
+                                            "name": "up",
+                                            "size": "60px",
+                                            "type": "custom:button-card"
+                                        },
+                                        {
+                                            "color": "rgb(115,73,118)",
+                                            "color_type": "card",
+                                            "entity": "switch.keukenblok_schakelaar",
+                                            "icon": "mdi:eye-off-outline",
+                                            "name": "UIT",
+                                            "size": "60px",
+                                            "type": "custom:button-card"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "color": "rgb(72,81,62)",
+                                    "color_type": "label-card",
+                                    "name": "Fontein klein",
+                                    "type": "custom:button-card"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "color": "rgb(154,171,123)",
+                                            "color_type": "card",
+                                            "entity": "switch.garden2_lights",
+                                            "icon": "mdi:lightbulb-on",
+                                            "name": "pomp lamp",
+                                            "size": "50px",
+                                            "type": "custom:button-card"
+                                        },
+                                        {
+                                            "color": "rgb(154,171,123)",
+                                            "color_type": "card",
+                                            "entity": "switch.garden2_pump",
+                                            "icon": "mdi:fountain",
+                                            "name": "pomp",
+                                            "size": "50px",
+                                            "type": "custom:button-card"
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "panel": true,
+                            "type": "vertical-stack"
+                        },
+                        {
+                            "entity": "climate.woonkamer",
+                            "name": "Woonkamer",
+                            "type": "thermostat"
+                        },
+                        {
+                            "aspect_ratio": "59%",
+                            "type": "iframe",
+                            "url": "https://api.buienradar.nl/image/1.0/RadarMapNL?w=350&h=250"
+                        },
+                        {
+                            "entity": "weather.apeldoorn",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "auto_toggle_view_period": 5,
+                            "color_icons": true,
+                            "energy_price": 0.18,
+                            "grid_energy_consumption_entity": "sensor.emoncms_import_kwh",
+                            "grid_energy_production_entity": "sensor.emoncms_solar_total_kwh",
+                            "grid_power_consumption_entity": "sensor.stroom_import",
+                            "grid_power_production_entity": "sensor.house_use",
+                            "initial_view": "energy",
+                            "money_unit": "\u20ac",
+                            "solar_energy_entity": "sensor.emoncms_solar_total_kwh",
+                            "solar_power_entity": "sensor.solar_totaal",
+                            "title_energy": "Stroom distributie",
+                            "title_money": "Stroom kosten&opbrengsten",
+                            "title_power": "Stroom verbruik",
+                            "type": "custom:power-wheel-card"
+                        },
+                        {
+                            "aspect_ratio": "85%",
+                            "type": "iframe",
+                            "url": "http://energy.bluemotica.nl/app/view?name=mysolarpv&readkey=dbdc764c84b322c26bfaa0f6cebb44fc&embed=1"
+                        },
+                        {
+                            "entity": "sensor.0x00158d000257a9fb_illuminance",
+                            "graph": "line",
+                            "hours_to_show": 24,
+                            "name": "Lux huiskamer",
+                            "type": "sensor",
+                            "unit": "lx"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.tuin_temperature"
+                                },
+                                {
+                                    "entity": "sensor.tuin_humidity"
+                                },
+                                {
+                                    "entity": "sensor.tuin2_temperature"
+                                },
+                                {
+                                    "entity": "sensor.regen_rain_rate"
+                                },
+                                {
+                                    "entity": "sensor.wind_wind_direction"
+                                },
+                                {
+                                    "entity": "sun.sun"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "theme": "Backend-selected",
+                            "title": "Het weer",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "switch.subwoofer_2",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "entity-button"
+                        }
+                    ],
+                    "icon": "mdi:home-assistant",
+                    "panel": false,
+                    "path": "default_view",
+                    "title": "Start"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "light.gang_spotjes_dimmer",
+                            "theme": "Backend-selected",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.0x000b57fffe307869_light",
+                            "name": "badkamer",
+                            "type": "light"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.kaku_handzender_k1"
+                                },
+                                {
+                                    "entity": "switch.kaku_handzender_k2"
+                                },
+                                {
+                                    "entity": "switch.kaku_handzender_k3"
+                                },
+                                {
+                                    "entity": "switch.kaku_stekker_dio"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "huiskamer details",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "light.rintze_plafond_dimmer",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.keukenplafond_dimmer",
+                            "type": "light"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "light.keuken_bar_led"
+                                },
+                                {
+                                    "entity": "light.keuken_koffie_led"
+                                },
+                                {
+                                    "entity": "light.keukenblok_strip"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "keuken details",
+                            "type": "entities"
+                        },
+                        {
+                            "entity": "switch.keukenblok_schakelaar",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "icon": "mdi:light-switch",
+                            "icon_height": "75px",
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "entity-button"
+                        },
+                        {
+                            "entity": "switch.kaku_stekker_dressoir",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "icon": "mdi:light-switch",
+                            "icon_height": "75px",
+                            "name": "Dressoir kast",
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "entity-button"
+                        },
+                        {
+                            "entity": "switch.kaku_handzender_k2",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "icon": "mdi:light-switch",
+                            "icon_height": "75px",
+                            "name": "serre buro",
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "entity-button"
+                        },
+                        {
+                            "entity": "light.aquarium",
+                            "icon": "mdi:fish",
+                            "name": "Aquarium",
+                            "type": "light"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "color": "rgb(255,225,125)",
+                                    "color_off": "rg(201,201,201)",
+                                    "color_type": "card",
+                                    "entity": "input_boolean.vakantie_verlichting",
+                                    "icon": "mdi:beach",
+                                    "name": "vakantie modus",
+                                    "size": "141px",
+                                    "type": "custom:button-card"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        }
+                    ],
+                    "icon": "mdi:lightbulb",
+                    "panel": false,
+                    "path": "lights",
+                    "title": "Lampen"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "switch.badkamerventilator",
+                            "hold_action": {
+                                "action": "more-info"
+                            },
+                            "icon": "mdi:fan",
+                            "icon_height": "75px",
+                            "show_icon": true,
+                            "show_name": true,
+                            "tap_action": {
+                                "action": "toggle"
+                            },
+                            "type": "entity-button"
+                        },
+                        {
+                            "entity": "light.rintze_plafond_dimmer",
+                            "type": "light"
+                        },
+                        {
+                            "entity": "light.0x000b57fffe307869_light",
+                            "name": "Badkamer plafond",
+                            "type": "light"
+                        }
+                    ],
+                    "icon": "mdi:hotel",
+                    "path": "first_floor",
+                    "title": "Boven"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "camera_image": "camera.oprit",
+                            "camera_live": true,
+                            "entities": [],
+                            "panel": true,
+                            "title": "Oprit",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "camera_image": "camera.Tuin",
+                            "camera_live": true,
+                            "entities": [],
+                            "panel": true,
+                            "title": "Tuin",
+                            "type": "picture-glance"
+                        },
+                        {
+                            "camera_image": "camera.voordeur",
+                            "camera_live": true,
+                            "entities": [],
+                            "panel": true,
+                            "title": "Deur",
+                            "type": "picture-glance"
+                        }
+                    ],
+                    "icon": "mdi:cctv",
+                    "path": "camera",
+                    "title": "beveiliging"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "content": "## Kleine fontein",
+                                    "type": "markdown"
+                                },
+                                {
+                                    "cards": [
+                                        {
+                                            "action": "call-service",
+                                            "entity": "switch.garden2_lights",
+                                            "icon": "mdi:lightbulb-on",
+                                            "name": "verlichting",
+                                            "service": "light.toggle",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "type": "entity-button"
+                                        },
+                                        {
+                                            "action": "call-service",
+                                            "entity": "switch.garden2_pump",
+                                            "icon": "mdi:fountain",
+                                            "name": "pomp",
+                                            "service": "light.toggle",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            }
+                                        }
+                                    ],
+                                    "type": "horizontal-stack"
+                                }
+                            ],
+                            "panel": true,
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "icon": "mdi:flower",
+                    "path": "exterior",
+                    "title": "Tuin"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "media_player.huiskamer",
+                            "type": "media-control"
+                        }
+                    ],
+                    "icon": "mdi:cast",
+                    "path": "media",
+                    "title": "Media spelers"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                "sensor.disk_utilization",
+                                "sensor.ram_utilization",
+                                "sensor.memory_use_percent",
+                                "sensor.cpu_temperature",
+                                "sensor.load_5m",
+                                "sensor.myipopendnscom"
+                            ],
+                            "show_header_toggle": false,
+                            "title": "RPI monitor",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "switch.garden2_lights",
+                                "switch.garden2_pump",
+                                "switch.kaku_handzender_k1",
+                                "switch.kaku_handzender_k2",
+                                "switch.kaku_handzender_k3",
+                                "switch.kaku_handzender_klein_k1",
+                                "switch.kaku_handzender_klein_k2",
+                                "switch.kaku_stekker_dio",
+                                "switch.kaku_stekker_dressoir",
+                                "switch.keukenblok_schakelaar",
+                                "switch.keukenplafond_schakelaar",
+                                "switch.rintze_schakelaar",
+                                "switch.subwoofer",
+                                "switch.badkamerventilator",
+                                "switch.bel_gang",
+                                "switch.bel_kamer",
+                                "switch.deurbel"
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all switches",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "device_tracker.avn",
+                                "device_tracker.gsm_alco"
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all devices",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "light.gang_spotjes_dimmer",
+                                "light.keuken_bar_led",
+                                "light.keuken_koffie_led",
+                                "light.keukenblok_strip",
+                                "light.keukenplafond_dimmer",
+                                "light.rintze_plafond_dimmer"
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all lights",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "script.away_mode_day",
+                                "script.away_mode_night",
+                                "script.deurbel_notify_reset",
+                                "script.movie_mode_off",
+                                "script.movie_mode_on",
+                                "script.mute",
+                                "script.pause",
+                                "script.pause_directv",
+                                "script.pause_other",
+                                "script.pause_plex",
+                                "script.unpause",
+                                "script.unpause_directv",
+                                "script.unpause_other",
+                                "script.update_homeassistant",
+                                "script.volume_down",
+                                "script.volume_up"
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all scripts",
+                            "type": "entities"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "detail": 1,
+                                    "entity": "sensor.amsterdam_apeldoorn",
+                                    "name": "NS Amsterdam - Apeldoorn",
+                                    "type": "sensor"
+                                },
+                                {
+                                    "detail": 0,
+                                    "entity": "sensor.apeldoorn_amsterdam",
+                                    "name": "NS Apeldoorn - Amsterdam",
+                                    "type": "sensor"
+                                }
+                            ],
+                            "type": "vertical-stack"
+                        }
+                    ],
+                    "icon": "mdi:settings",
+                    "path": "settings",
+                    "title": "Settings"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "automation.deurbel_foto_en_bericht"
+                                },
+                                {
+                                    "entity": "automation.enable_mqtt_discovery_for_all_devices"
+                                },
+                                {
+                                    "entity": "automation.power_state_on_ha_start_up"
+                                },
+                                {
+                                    "entity": "automation.update_notifications"
+                                },
+                                {
+                                    "entity": "automation.vriezen"
+                                },
+                                {
+                                    "entity": "automation.verlichting_huiskamer_aan_bij_schemer"
+                                },
+                                {
+                                    "entity": "automation.verlichting_huiskamer_uit_om_23_xxu"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all automations",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "script.away_mode_day",
+                                "script.away_mode_night",
+                                "script.deurbel_notify_reset",
+                                "script.movie_mode_off",
+                                "script.movie_mode_on",
+                                "script.mute",
+                                "script.pause",
+                                "script.pause_directv",
+                                "script.pause_other",
+                                "script.pause_plex",
+                                "script.unpause",
+                                "script.unpause_directv",
+                                "script.unpause_other",
+                                "script.update_homeassistant",
+                                "script.volume_down",
+                                "script.volume_up"
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all scripts",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "device_tracker.avn",
+                                "device_tracker.gsm_alco"
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all devices",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.garden2_lights"
+                                },
+                                {
+                                    "entity": "switch.garden2_pump"
+                                },
+                                {
+                                    "entity": "switch.kaku_handzender_k1"
+                                },
+                                {
+                                    "entity": "switch.kaku_handzender_k2"
+                                },
+                                {
+                                    "entity": "switch.kaku_handzender_k3"
+                                },
+                                {
+                                    "entity": "switch.kaku_handzender_klein_k1"
+                                },
+                                {
+                                    "entity": "switch.kaku_handzender_klein_k2"
+                                },
+                                {
+                                    "entity": "switch.kaku_stekker_dio"
+                                },
+                                {
+                                    "entity": "switch.kaku_stekker_dressoir"
+                                },
+                                {
+                                    "entity": "switch.keukenblok_schakelaar"
+                                },
+                                {
+                                    "entity": "switch.keukenplafond_schakelaar"
+                                },
+                                {
+                                    "entity": "switch.rintze_schakelaar"
+                                },
+                                {
+                                    "entity": "switch.subwoofer_2"
+                                },
+                                {
+                                    "entity": "switch.badkamerventilator"
+                                },
+                                {
+                                    "entity": "switch.bel_gang"
+                                },
+                                {
+                                    "entity": "switch.bel_kamer"
+                                },
+                                {
+                                    "entity": "switch.deurbel"
+                                },
+                                {
+                                    "entity": "input_boolean.vakantie_verlichting"
+                                },
+                                {
+                                    "entity": "switch.subwoofer"
+                                }
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all switches",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                "light.gang_spotjes_dimmer",
+                                "light.keuken_bar_led",
+                                "light.keuken_koffie_led",
+                                "light.keukenblok_strip",
+                                "light.keukenplafond_dimmer",
+                                "light.rintze_plafond_dimmer"
+                            ],
+                            "show_header_toggle": true,
+                            "title": "all lights",
+                            "type": "entities"
+                        }
+                    ],
+                    "icon": "mdi:buffer",
+                    "path": "automation_view",
+                    "title": "Automation"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entity": "light.0x000b57fffe307869_light",
+                            "theme": "Backend-selected",
+                            "type": "light"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.badkamerventilator"
+                                },
+                                {
+                                    "entity": "sensor.zb_ikea_dimknop_action"
+                                }
+                            ],
+                            "show_icon": true,
+                            "show_name": true,
+                            "show_state": false,
+                            "type": "glance"
+                        },
+                        {
+                            "entity": "weather.apeldoorn",
+                            "type": "weather-forecast"
+                        },
+                        {
+                            "entity": "sensor.aquarium_d1_ds18b20_temperature",
+                            "type": "sensor"
+                        },
+                        {
+                            "entity": "sensor.aquarium_d1_ds18b20_temperature",
+                            "max": 50,
+                            "min": 0,
+                            "severity": {
+                                "green": 20,
+                                "red": 10,
+                                "yellow": 30
+                            },
+                            "theme": "default",
+                            "type": "gauge"
+                        }
+                    ],
+                    "path": "test-paneel",
+                    "title": "test paneel"
+                }
+            ]
+        }
+    },
+    "key": "lovelace",
+    "version": 1
+}

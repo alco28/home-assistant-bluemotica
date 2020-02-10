@@ -11,7 +11,7 @@
   # payload_not_available: "Offline"
   # retain: true
 - platform: rfxtrx
-  automatic_add: True
+  automatic_add: false
   signal_repetitions: 2
   devices:
     0b1100a7009cb39a01000060:

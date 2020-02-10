@@ -12,7 +12,7 @@ default_view:
     - group.foyer
     - group.huiskamer
     - group.keuken
-    - climate.woonkamer
+    - climate.thuis
     # - group.upstairs
     - sensor.emoncms_solar_total
 
@@ -32,9 +32,8 @@ lights:
   entities:
     - group.living_room_lights
     - group.hal
-    - group.foyer
     - group.garden
-    - group.kitchen_lights
+    - group.keuken
 media:
   view: yes
   icon: mdi:cast
@@ -62,17 +61,14 @@ christmas:
 huiskamer:
   control: hidden
   entities:
-    - sensor.current_activity
+    # - sensor.current_activity
     - input_select.harmony
-    - light.staandelamp_3luik
-    - light.dressoir
+    - switch.keukenblok_schakelaar
+    - switch.kaku_stekker_dressoir
     - switch.kaku_handzender_k1
     - switch.kaku_handzender_k2
     - switch.kaku_handzender_k3
-# master_bedroom:
-  # - light.tristans_nightstand
-  # - light.crystals_nightstand
-  # - light.bedroom_floor_lamp
+    - switch.kaku_stekker_dio
 first_floor:
   view: yes
   icon: mdi:hotel
@@ -82,9 +78,13 @@ first_floor:
     - switch.rintze_schakelaar
     - switch.badkamerventilator
     
-  # - light.desk_lamp
-  # - climate.upstairs_hallway
-  # - sensor.protect_up
+
+hal:
+  name: hal
+  control: hidden
+  entities:
+    - light.gang_spotjes_dimmer
+
 garage:
   
 living_room_lights:
@@ -94,8 +94,11 @@ keuken:
   control: hidden
   entities:
     - switch.keukenblok
-    - light.keukenplafond
-    # - light.overhead_light
+    - light.keuken_bar_led
+    - light.keuken_koffie_led
+    - light.keukenblok_strip
+    - light.keukenplafond_dimmer
+
 dining_room:
 
 foyer:
@@ -119,6 +122,8 @@ chromecasts:
 weer:
   - sun.sun
   - sensor.tuin_temperature
+  - sensor.tuin_humidity
+  - sensor.tuin2_temperature
   - sensor.regen_rain_rate
   - sensor.wind_wind_direction
 
@@ -144,7 +149,3 @@ system_monitor:
     - sensor.cpu_temperature
     - sensor.load_5m
     - sensor.myipopendnscom
-    
-    
-    
-
